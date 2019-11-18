@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="Barnaul.Windows.MapUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Barnaul.Windows"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Margin" Value="1 0" />
+                    <Setter Property="Padding" Value="4 2" />
+                </Style>
+                <Style TargetType="ComboBox">
+                    <Setter Property="Margin" Value="1 0"/>
+                </Style>
+            </StackPanel.Resources>
+            <Button Content="106x90"/>
+            <Button Content="Сел"/>
+            <ComboBox SelectedIndex="0" SelectionChanged="ComboBox_SelectionChanged">
+                <ComboBoxItem Content="полный"/>
+            </ComboBox>
+            <ComboBox Name="combo" SelectedIndex="0" Height="21.96" VerticalAlignment="Bottom" DropDownClosed="Combo_DropDownClosed">
+                <ComboBoxItem Content="45"/>
+                <ComboBoxItem Content="90"/>
+                <ComboBoxItem Content="120"/>
+            </ComboBox>
+            <Button Content="Карта"/>
+            <Button Content="РучнВ"/>
+            <Button Content="Расст-е"/>
+            <StackPanel Orientation="Horizontal">
+            <ToggleButton Content=" БР " Checked="ToggleButton_Checked" IsChecked="False"/>
+            <ToggleButton Content=" ДР " IsChecked="False"/>
+            <ToggleButton Content=" ТР " IsChecked="True"/>
+            </StackPanel>
+        </StackPanel>
+        <Grid  Grid.Row="1" Background="Black" Margin="1">
+            <Grid>
+                <Canvas x:Name="Background"
+                    Width="{Binding ActualWidth, ElementName=MainCanvas}"
+                    Height="{Binding ActualHeight, ElementName=MainCanvas}"
+                    SizeChanged="UpdateBackPattern"/>   
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
+    
