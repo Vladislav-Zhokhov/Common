@@ -47,6 +47,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -198,6 +199,29 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Profile_picture_of_TehPlaneFreak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cancel-symbol-transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="305-3056634_out-of-stock-clipart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="explosion-gif-png-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cancel-symbol-transparent - Копировать.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\Profile_picture_of_TehPlaneFreak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\cancel-symbol-transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\305-3056634_out-of-stock-clipart.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -107,7 +107,7 @@
 
             </MenuItem>
             <MenuItem Header="Выход">
-                <MenuItem Header="Перезапуск ПО" InputGestureText="Ctrl+95" />
+                <MenuItem Header="Перезапуск ПО" InputGestureText="Ctrl+95" Click="restart" />
                 <MenuItem Header="Выключение" InputGestureText="Ctrl+96" />
             </MenuItem>
         </Menu>

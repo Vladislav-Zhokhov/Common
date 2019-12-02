@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"  PreviewKeyDown="Window_PreviewKeyDown">
     <Grid>
-        <Canvas x:Name="canvas" Margin="10,10,10,75" Background="#FFEAEAEA" MouseMove="Canvas_MouseMove" PreviewMouseLeftButtonDown="Canvas_PreviewMouseLeftButtonDown" PreviewMouseRightButtonDown="Canvas_PreviewMouseRightButtonDown" Focusable="True" ClipToBounds="True"/>
+        <Canvas x:Name="canvas" Margin="10,10,10,75" Background="#FFEAEAEA" MouseMove="Canvas_MouseMove" PreviewMouseLeftButtonDown="Canvas_PreviewMouseLeftButtonDown" PreviewMouseLeftButtonUp="Canvas_PreviewMouseRightButtonDown" Focusable="True" ClipToBounds="True"/>
         <UniformGrid x:Name="Modes_grid" Height="27" Margin="10,0,10,34" VerticalAlignment="Bottom" Columns="5">
             <ToggleButton Content="Default" Margin="2,0" Tag="1" IsChecked="True" Click="ModeChange_Click"/>
             <ToggleButton Content="45° Left" Margin="2,0" Tag="2" Click="ModeChange_Click"/>

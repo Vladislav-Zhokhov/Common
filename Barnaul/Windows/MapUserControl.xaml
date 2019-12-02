@@ -35,17 +35,29 @@
             <Button Content="РучнВ"/>
             <Button Content="Расст-е"/>
             <StackPanel Orientation="Horizontal">
-            <ToggleButton Content=" БР " Checked="ToggleButton_Checked" IsChecked="False"/>
-            <ToggleButton Content=" ДР " IsChecked="False"/>
-            <ToggleButton Content=" ТР " IsChecked="True"/>
+                <ToggleButton x:Name="BR" Content=" БР " Checked="ToggleButton_Checked" IsChecked="False"/>
+                <ToggleButton Content=" ДР " IsChecked="False"/>
+                <ToggleButton Content=" ТР " IsChecked="True"/>
             </StackPanel>
         </StackPanel>
-        <Grid  Grid.Row="1" Background="Black" Margin="1">
-            <Grid>
+        <Grid  Grid.Row="1" Background="Black" Margin="1" MouseLeftButtonDown="MouseDown" MouseLeftButtonUp="MouseUp" MouseRightButtonDown="button1_Click" >
+            <Image x:Name="pictureBox1" Height="100" Width="100" Source="Profile_picture_of_TehPlaneFreak.png" Margin="-900,0,0,0" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform x:Name="pov" Angle="65.339"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="pictureBox2" Source="305-3056634_out-of-stock-clipart.png" Margin="0,200,0,0" Width="10" Height="10" Opacity="0"/>
+            <Grid Margin="0">
                 <Canvas x:Name="Background"
                     Width="{Binding ActualWidth, ElementName=MainCanvas}"
                     Height="{Binding ActualHeight, ElementName=MainCanvas}"
-                    SizeChanged="UpdateBackPattern"/>   
+                    SizeChanged="UpdateBackPattern" MouseMove="move">
+                </Canvas>
             </Grid>
         </Grid>
     </Grid>

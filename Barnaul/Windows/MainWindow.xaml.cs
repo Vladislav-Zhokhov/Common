@@ -38,5 +38,11 @@ namespace Barnaul.Windows
         {
             new Characteristics().ShowDialog();
         }
+
+        private void restart(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
+            Application.Current.Shutdown();
+        }
     }
 }
