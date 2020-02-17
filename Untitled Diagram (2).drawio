@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2020-02-17T10:42:25.630Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36 OPR/66.0.3515.72" etag="kCVWyirwKFI_f031jGwh" version="12.7.0" type="github" pages="3">
+<mxfile host="www.draw.io" modified="2020-02-17T10:45:46.546Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36 OPR/66.0.3515.72" etag="5XrSZhZ3fwERs3BpxLmC" version="12.7.0" type="github" pages="3">
   <diagram id="KgouGHTUGytn4UWCruJQ" name="Page-1">
     <mxGraphModel dx="1302" dy="584" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="10000" pageHeight="10000" math="0" shadow="0">
       <root>
@@ -268,7 +268,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="F7_GL3VaxNbvsSMNM0qm" name="architecture">
-    <mxGraphModel dx="1860" dy="834" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="744" dy="334" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="JRDUnAhR2fNw6kQFVOVW-0"/>
         <mxCell id="JRDUnAhR2fNw6kQFVOVW-1" parent="JRDUnAhR2fNw6kQFVOVW-0"/>
@@ -290,10 +290,10 @@
         <mxCell id="JRDUnAhR2fNw6kQFVOVW-7" value="Уровень данных" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
           <mxGeometry x="95" y="941.62" width="100" height="20" as="geometry"/>
         </mxCell>
-        <mxCell id="JRDUnAhR2fNw6kQFVOVW-8" value="обработчики событий, требующие взаимодействия с другими слоями" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
+        <mxCell id="JRDUnAhR2fNw6kQFVOVW-8" value="Обработчики событий, требующие взаимодействия с другими слоями" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
           <mxGeometry x="230" y="130" width="210" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="JRDUnAhR2fNw6kQFVOVW-9" value="обработчики событий, не требующие взаимодействия с другими слоями" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
+        <mxCell id="JRDUnAhR2fNw6kQFVOVW-9" value="Обработчики событий, не требующие взаимодействия с другими слоями" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
           <mxGeometry x="500" y="130" width="220" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="JRDUnAhR2fNw6kQFVOVW-11" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;endWidth=19.723183391003463;endSize=11.976470588235294;width=246.89655172413794;startSize=17.50344827586207;" edge="1" parent="JRDUnAhR2fNw6kQFVOVW-1" source="JRDUnAhR2fNw6kQFVOVW-8">
@@ -305,10 +305,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="JRDUnAhR2fNw6kQFVOVW-12" value="контроль структур данных юнитов(воздушные, наземные объекты, карта)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
+        <mxCell id="JRDUnAhR2fNw6kQFVOVW-12" value="Контроль структур данных юнитов(воздушные, наземные объекты, карта)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
           <mxGeometry x="140" y="756" width="150" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="JRDUnAhR2fNw6kQFVOVW-22" value="Интерфейсы:&lt;br&gt;&lt;br&gt;&lt;br&gt;- IAirUnit&lt;br&gt;(взаимодействие со структурами объектов летательных аппаратов)&lt;br&gt;&lt;br&gt;&lt;br&gt;-IGroundUnit&lt;br&gt;(взаимодействие&amp;nbsp;со структурами объектов наземной обстановки)&lt;br&gt;&lt;br&gt;&lt;br&gt;- IMap&lt;br&gt;(взаимодействие&amp;nbsp;со структурами карты)&lt;br&gt;&lt;br&gt;&lt;br&gt;- IScenario&lt;br&gt;(взаимодействует со структурами сценариев)&lt;br&gt;&lt;br&gt;&lt;br&gt;-ISettings&lt;br&gt;(взаимодействует со структурами описательной информации(отображаемой в вызываемых окнах))&lt;br&gt;&lt;br&gt;&lt;br&gt;-IEducation&lt;br&gt;(взаимодействие со структурами контроля учебной деятельности)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
+        <mxCell id="JRDUnAhR2fNw6kQFVOVW-22" value="Интерфейсы:&lt;br&gt;&lt;br&gt;&lt;br&gt;- IAirUnit&lt;br&gt;(Взаимодействие со структурами объектов летательных аппаратов)&lt;br&gt;&lt;br&gt;&lt;br&gt;-IGroundUnit&lt;br&gt;(Взаимодействие&amp;nbsp;со структурами объектов наземной обстановки)&lt;br&gt;&lt;br&gt;&lt;br&gt;- IMap&lt;br&gt;(Взаимодействие&amp;nbsp;со структурами карты)&lt;br&gt;&lt;br&gt;&lt;br&gt;- IScenario&lt;br&gt;(Взаимодействие&amp;nbsp;со структурами сценариев)&lt;br&gt;&lt;br&gt;&lt;br&gt;-ISettings&lt;br&gt;(Взаимодействие&amp;nbsp;со структурами описательной информации(отображаемой в вызываемых окнах))&lt;br&gt;&lt;br&gt;&lt;br&gt;-IEducation&lt;br&gt;(Взаимодействие&amp;nbsp;со структурами контроля учебной деятельности)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
           <mxGeometry x="220" y="240" width="230" height="450" as="geometry"/>
         </mxCell>
         <mxCell id="z1R9OSvyH7Kqvteqjw2O-0" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;width=48.275862068965516;endSize=4.744827586206896;" edge="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
@@ -320,13 +320,13 @@
         <mxCell id="z1R9OSvyH7Kqvteqjw2O-1" value="GUI" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
           <mxGeometry x="440" y="80" width="40" height="20" as="geometry"/>
         </mxCell>
-        <mxCell id="z1R9OSvyH7Kqvteqjw2O-8" value="журналирование" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
+        <mxCell id="z1R9OSvyH7Kqvteqjw2O-8" value="Журналирование" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
           <mxGeometry x="310" y="756" width="100" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="WKlhvTXUq6VagxtlS_Ek-0" value="авторизация" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
+        <mxCell id="WKlhvTXUq6VagxtlS_Ek-0" value="Авторизация" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
           <mxGeometry x="565" y="756" width="90" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="WKlhvTXUq6VagxtlS_Ek-1" value="контроль учебной деятельности" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
+        <mxCell id="WKlhvTXUq6VagxtlS_Ek-1" value="Контроль учебной деятельности" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
           <mxGeometry x="430" y="756" width="120" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="yV_PDrxA425aN5boLF13-0" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;width=94.48275862068965;startSize=5.675862068965518;endSize=5.675862068965518;" edge="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
