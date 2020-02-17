@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2020-02-17T10:45:46.546Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36 OPR/66.0.3515.72" etag="5XrSZhZ3fwERs3BpxLmC" version="12.7.0" type="github" pages="3">
+<mxfile host="www.draw.io" modified="2020-02-17T12:58:56.948Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36 OPR/66.0.3515.72" etag="INcTv_YmLXyXrSIYLxcC" version="12.7.0" type="github" pages="4">
   <diagram id="KgouGHTUGytn4UWCruJQ" name="Page-1">
     <mxGraphModel dx="1302" dy="584" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="10000" pageHeight="10000" math="0" shadow="0">
       <root>
@@ -338,23 +338,40 @@
         <mxCell id="yV_PDrxA425aN5boLF13-4" value="IFileManager" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
           <mxGeometry x="363.38" y="874.62" width="100" height="50" as="geometry"/>
         </mxCell>
-        <mxCell id="yV_PDrxA425aN5boLF13-17" value="Карты" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
-          <mxGeometry x="192.5" y="960" width="80" height="100" as="geometry"/>
+        <mxCell id="yV_PDrxA425aN5boLF13-17" value="Maps" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
+          <mxGeometry x="192.5" y="960" width="80" height="80" as="geometry"/>
         </mxCell>
-        <mxCell id="yV_PDrxA425aN5boLF13-18" value="&lt;span style=&quot;white-space: normal&quot;&gt;Объекты воздушной обстановки&lt;/span&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
-          <mxGeometry x="287.5" y="960" width="80" height="100" as="geometry"/>
+        <mxCell id="yV_PDrxA425aN5boLF13-19" value="&lt;span style=&quot;white-space: normal&quot;&gt;GroundUnits&lt;/span&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
+          <mxGeometry x="385.5" y="960" width="80" height="80" as="geometry"/>
         </mxCell>
-        <mxCell id="yV_PDrxA425aN5boLF13-19" value="&lt;span style=&quot;white-space: normal&quot;&gt;Объекты наземной обстановки&lt;/span&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
-          <mxGeometry x="385.5" y="960" width="80" height="100" as="geometry"/>
+        <mxCell id="yV_PDrxA425aN5boLF13-20" value="Scenarios" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
+          <mxGeometry x="485.5" y="960" width="80" height="80" as="geometry"/>
         </mxCell>
-        <mxCell id="yV_PDrxA425aN5boLF13-20" value="&lt;span style=&quot;white-space: normal&quot;&gt;Сценарии&lt;/span&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
-          <mxGeometry x="485.5" y="960" width="80" height="100" as="geometry"/>
+        <mxCell id="yV_PDrxA425aN5boLF13-21" value="&lt;span style=&quot;white-space: normal&quot;&gt;Settings&lt;/span&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
+          <mxGeometry x="587.5" y="960" width="80" height="80" as="geometry"/>
         </mxCell>
-        <mxCell id="yV_PDrxA425aN5boLF13-21" value="&lt;span style=&quot;white-space: normal&quot;&gt;Настройки&lt;/span&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
-          <mxGeometry x="587.5" y="960" width="80" height="100" as="geometry"/>
+        <mxCell id="yV_PDrxA425aN5boLF13-22" value="&lt;span style=&quot;white-space: normal&quot;&gt;AirUnits&lt;/span&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
+          <mxGeometry x="287.5" y="960" width="80" height="80" as="geometry"/>
         </mxCell>
-        <mxCell id="yV_PDrxA425aN5boLF13-22" value="&lt;span style=&quot;white-space: normal&quot;&gt;Объекты воздушной обстановки&lt;/span&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="JRDUnAhR2fNw6kQFVOVW-1">
-          <mxGeometry x="287.5" y="960" width="80" height="100" as="geometry"/>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="WPVX4LSQCabjop_LZLR9" name="DataStructures">
+    <mxGraphModel dx="346" dy="401" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="xevxtzLHdb0Cjb-lHdhE-0"/>
+        <mxCell id="xevxtzLHdb0Cjb-lHdhE-1" parent="xevxtzLHdb0Cjb-lHdhE-0"/>
+        <mxCell id="WsR9-tQ_toaVHk2lSloU-2" value="[serializable]TerrainMap" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="xevxtzLHdb0Cjb-lHdhE-1">
+          <mxGeometry x="30" y="30" width="190" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="WsR9-tQ_toaVHk2lSloU-3" value="- filename: string&#xa;- picture: Image &#xa;+drew_object: list&#xa;+show_drew: bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WsR9-tQ_toaVHk2lSloU-2">
+          <mxGeometry y="26" width="190" height="64" as="geometry"/>
+        </mxCell>
+        <mxCell id="WsR9-tQ_toaVHk2lSloU-4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="WsR9-tQ_toaVHk2lSloU-2">
+          <mxGeometry y="90" width="190" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="WsR9-tQ_toaVHk2lSloU-5" value="+ show(bool show_drew): void&#xa;+ save()&#xa;+ get_filename()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WsR9-tQ_toaVHk2lSloU-2">
+          <mxGeometry y="98" width="190" height="62" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
