@@ -105,6 +105,9 @@
     <Compile Include="Windows\MapUserControl.xaml.cs">
       <DependentUpon>MapUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Trace.xaml.cs">
+      <DependentUpon>Trace.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\VvodComandi2ZWindow.xaml.cs">
       <DependentUpon>VvodComandi2ZWindow.xaml</DependentUpon>
     </Compile>
@@ -169,6 +172,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\MapUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Trace.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

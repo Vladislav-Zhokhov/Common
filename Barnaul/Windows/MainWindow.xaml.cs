@@ -49,5 +49,20 @@ namespace Barnaul.Windows
         {
             new CommandTable().ShowDialog();
         }
+
+        private void Gk_Click(object sender, RoutedEventArgs e)
+        {
+            Mest.IsChecked = false;
+        }
+
+        private void Mest_Click(object sender, RoutedEventArgs e)
+        {
+            Gk.IsChecked = false;
+        }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            new Trace().ShowDialog();
+        }
     }
 }
