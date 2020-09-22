@@ -9,29 +9,29 @@ namespace OpenPaint.Utility
     public class BitmapDescription
     {
         /// <summary>
-        /// 图像文件名
+        /// Image filename
         /// </summary>
         public string Name { get; set; }
         /// <summary>
-        /// 图像宽度（像素）
+        /// Image width (pixels）
         /// </summary>
         public int Width { get; set; }
         /// <summary>
-        /// 图像高度（像素）
+        /// Image height (pixels）
         /// </summary>
         public int Height { get; set; }
         /// <summary>
-        /// 图像水平DPI
+        /// Image level DPI
         /// </summary>
         public double DPI_X { get; set; }
         /// <summary>
-        /// 图像垂直DPI
+        /// Image level
         /// </summary>
         public double DPI_Y { get; set; }
 
         public BitmapDescription()
         {
-            this.Name = "新建图像";
+            this.Name = "New image";
             this.Width = 800;
             this.Height = 600;
             this.DPI_X = 96;

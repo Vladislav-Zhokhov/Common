@@ -17,7 +17,7 @@ using System.Windows.Shapes;
 namespace OpenPaint
 {
     /// <summary>
-    /// MainWindow.xaml 的交互逻辑
+    /// MainWindow.xaml The interaction logic
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -51,28 +51,28 @@ namespace OpenPaint
             //this.drawingBoard.Debug();
         }
         /// <summary>
-        /// 往TabControl中添加一个TabItem及一个画板
+        /// To TabControl add one TabItem and a drawinf board
         /// </summary>
         private void NewDrawingBoard(BitmapDescription bitmapDescription)
         {
             DrawingBoard drawingBoard = new DrawingBoard(bitmapDescription);
-            // 为画板创建数据绑定
-            Binding binding = new Binding();        // 当前图层
+            // Creating data bindings for artboards
+            Binding binding = new Binding();        // Current layer
             binding.Source = this.layerList;
             binding.Path = new PropertyPath("SelectedItem");
             drawingBoard.SetBinding(DrawingBoard.CurrentLayerProperty, binding);
 
-            binding = new Binding();        // 绘画模式
+            binding = new Binding();        // Painting mode
             binding.Source = this.toolList;
             binding.Path = new PropertyPath("SelectedItem");
             drawingBoard.SetBinding(DrawingBoard.DrawingModeProperty, binding);
 
-            binding = new Binding();        // 绘画颜色
+            binding = new Binding();        // Painting colors
             binding.Source = this.colorPicker;
             binding.Path = new PropertyPath("SelectedColor");
             drawingBoard.SetBinding(DrawingBoard.ColorProperty, binding);
 
-            binding = new Binding();        // 画笔大小
+            binding = new Binding();        // Brush size
             binding.Source = this.penSize;
             binding.Path = new PropertyPath("Value");
             drawingBoard.SetBinding(DrawingBoard.PenThicknessProperty, binding);
@@ -87,7 +87,7 @@ namespace OpenPaint
             this.layerList.SelectedIndex = 0;
         }
         /// <summary>
-        /// 新建文件
+        /// New file
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -101,7 +101,7 @@ namespace OpenPaint
             }
         }
         /// <summary>
-        /// 打开图像文件
+        /// Opening the image file
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -111,21 +111,21 @@ namespace OpenPaint
             if (filename != null)
             {
                 BitmapImage imgSource = BitmapHelper.GetBitmapImage(filename);
-                // 创建位图描述信息
+                // Create bitmap description information
                 BitmapDescription bitmapDescription = new BitmapDescription();
                 bitmapDescription.Name = filename;
                 bitmapDescription.Width = imgSource.PixelWidth;
                 bitmapDescription.Height = imgSource.PixelHeight;
                 bitmapDescription.DPI_X = imgSource.DpiX;
                 bitmapDescription.DPI_Y = imgSource.DpiY;
-                // 创建画布
+                // Creating a canvas
                 NewDrawingBoard(bitmapDescription);
-                // 将图像绘制到画布的图层上
+                // Draw an image to a layer on the canvas
                 CurrentDrawingBoard.AddBitmap(imgSource);
             }
         }
         /// <summary>
-        ///  保存位图文件
+        ///  Save bitmap files
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -136,7 +136,7 @@ namespace OpenPaint
                 ((TabItem)tabBoard.SelectedItem).Header = filename;
         }
         /// <summary>
-        /// 是否能保存位图文件
+        /// Can I save a bitmap file
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -145,7 +145,7 @@ namespace OpenPaint
             e.CanExecute = (tabBoard.SelectedItem != null && CurrentDrawingBoard != null);
         }
         /// <summary>
-        /// 文件另存为
+        /// Save file as
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -154,7 +154,7 @@ namespace OpenPaint
             CurrentDrawingBoard.SaveAs();
         }
         /// <summary>
-        /// 是否能另存为
+        /// Can I save as
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

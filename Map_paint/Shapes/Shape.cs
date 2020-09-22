@@ -10,7 +10,7 @@ namespace OpenPaint.Shapes
     public abstract class Shape : DrawingVisual
     {
         /// <summary>
-        /// 渲染图形
+        /// Rendering graphics
         /// </summary>
         protected abstract void OnRender(DrawingContext dc);
 
