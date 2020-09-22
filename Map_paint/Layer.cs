@@ -9,16 +9,16 @@ using System.Windows.Media;
 namespace OpenPaint
 {
     /// <summary>
-    /// 图层，每个图层可以存放若干图形（Drawing）
+    /// Layers,each layer can hold several graphics（Drawing）
     /// </summary>
     class Layer : System.Windows.Controls.Canvas
     {
         /// <summary>
-        /// 图层计数器，用来给图层命名
+        /// Layer counter, used to name the layer
         /// </summary>
         static int LayerCount = 1;
         /// <summary>
-        /// 可视元素容器
+        /// Visual element container
         /// </summary>
         private List<Visual> visuals;
         public Layer(int width, int height)
@@ -26,7 +26,7 @@ namespace OpenPaint
             this.visuals = new List<Visual>();
 
             this.Background = Brushes.Transparent;
-            this.Tag = "新建图层 " + LayerCount++;
+            this.Tag = "New layer " + LayerCount++;
             this.Width = width;
             this.Height = height;
         }
@@ -73,7 +73,7 @@ namespace OpenPaint
             base.RemoveLogicalChild(visual);
         }
         /// <summary>
-        /// 根据点获取对应的可视对象
+        /// Get the corresponding visual object based on the point
         /// </summary>
         /// <param name="point"></param>
         /// <returns></returns>
