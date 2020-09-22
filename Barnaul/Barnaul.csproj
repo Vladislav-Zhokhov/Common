@@ -105,6 +105,9 @@
     <Compile Include="Windows\MapUserControl.xaml.cs">
       <DependentUpon>MapUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\SpeedUpdate.xaml.cs">
+      <DependentUpon>SpeedUpdate.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Trace.xaml.cs">
       <DependentUpon>Trace.xaml</DependentUpon>
     </Compile>
@@ -172,6 +175,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\MapUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SpeedUpdate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

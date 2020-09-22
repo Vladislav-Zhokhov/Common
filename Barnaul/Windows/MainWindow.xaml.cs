@@ -64,5 +64,20 @@ namespace Barnaul.Windows
         {
             new Trace().ShowDialog();
         }
+
+        private void Reper_Click(object sender, RoutedEventArgs e)
+        {
+            Ts.IsChecked = false;
+        }
+
+        private void Ts_Click(object sender, RoutedEventArgs e)
+        {
+            Reper.IsChecked = false;
+        }
+
+        private void MenuItem_Click_3(object sender, RoutedEventArgs e)
+        {
+            new SpeedUpdate().ShowDialog();
+        }
     }
 }

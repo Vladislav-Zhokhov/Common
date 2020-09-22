@@ -130,10 +130,10 @@
 
             <MenuItem Header="Парметры">
                 <MenuItem Header="Репер" >
-                    <MenuItem Header="Репер"/>
-                    <MenuItem Header="Своя ТС"/>
+                    <MenuItem Name="Reper" Header="Репер" IsCheckable="True" IsChecked="True" Click="Reper_Click"/>
+                    <MenuItem Name="Ts" Header="Своя ТС" IsCheckable="True" Click="Ts_Click"/>
                 </MenuItem>
-                <MenuItem Header="Темп обновления..." />
+                <MenuItem Header="Темп обновления..." Click="MenuItem_Click_3" />
                 <MenuItem Header="Рисование..." />
                 <MenuItem Header="Шрифт" />
                 <MenuItem Header="Сохранить" />
