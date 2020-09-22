@@ -108,7 +108,7 @@
                         <ColumnDefinition Width="2*"/>
                         <ColumnDefinition Width="0.5*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Text="画笔大小"/>
+                    <TextBlock Text="Brush size"/>
                     <Slider Name="penSize" Minimum="1" Maximum="100" Value="0" Grid.Column="1"
                                 IsSnapToTickEnabled="True" TickFrequency="1"/>
                     <TextBox Text="{Binding ElementName=penSize, Path=Value}" Grid.Column="2" Grid.Row="0"/>
