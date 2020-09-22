@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace OpenPaint
 {
     /// <summary>
-    /// NewFileDialog.xaml 的交互逻辑
+    /// NewFileDialog.xaml The interaction logic
     /// </summary>
     public partial class NewFileDialog : Window
     {
@@ -24,7 +24,7 @@ namespace OpenPaint
             InitializeComponent();
         }
         /// <summary>
-        /// 位图描述
+        /// Bitmap description
         /// </summary>
         public Utility.BitmapDescription BitmapDescription
         {

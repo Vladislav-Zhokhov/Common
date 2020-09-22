@@ -10,7 +10,7 @@ namespace OpenPaint.Shapes
     public enum DrawingMode
     {
         None = 0,
-        Pen,        // 对应Ink
+        Pen,        // Соответствующие чернила
         //GestureOnly,
         //InkAndGesture,
         //Select,
@@ -19,16 +19,16 @@ namespace OpenPaint.Shapes
 
 
         /// <summary>
-        /// 画直线
+        /// Draw straight lines
         /// </summary>
         Line,
         /// <summary>
-        /// 画矩形
+        /// Draw rectangles
         /// </summary>
         Rectangle,
         /// <summary>
-        /// 画椭圆
+        /// Draw ellipses
         /// </summary>
-        Ellipse,
+        Ellipse
     }
 }

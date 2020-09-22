@@ -13,15 +13,15 @@ namespace OpenPaint.Utility
     class BitmapHelper
     {
         /// <summary>
-        /// 将指定位图保存到指定路径中
+        /// Saves the specified bitmap to the specified path
         /// </summary>
-        /// <param name="bitmap">要保存的位图</param>
-        /// <param name="path">要保存到的路径（包含文件名和扩展卡名）</param>
+        /// <param name="bitmap">Bitmap to save</param>
+        /// <param name="path">The path to save to (including the file name and extension card name）</param>
         public static void Save(BitmapSource bitmap, string path)
         {
             BitmapEncoder encoder = null;
             string fileExtension = System.IO.Path.GetExtension(path).ToUpper();
-            //选取编码器
+            //Select encoder
             switch (fileExtension)
             {
                 case ".BMP":
@@ -47,19 +47,19 @@ namespace OpenPaint.Utility
                 encoder.Save(file);
         }
         /// <summary>
-        /// 从控件表面获取图像
+        /// Get an image from the control surface
         /// </summary>
         /// <param name="element"></param>
         /// <param name="type"></param>
         /// <param name="outputPath"></param>
         public static void GetPicFromControl(FrameworkElement element, String type, String outputPath)
         {
-            //96为显示器DPI
+            //96 For the monitor DPI
             var bitmapRender = new RenderTargetBitmap((int)element.ActualWidth, (int)element.ActualHeight, 96, 96, PixelFormats.Pbgra32);
-            //控件内容渲染RenderTargetBitmap
+            //Control content rendering RenderTargetBitmap
             bitmapRender.Render(element);
             BitmapEncoder encoder = null;
-            //选取编码器
+            //Select encoder
             switch (type.ToUpper())
             {
                 case ".BMP":
@@ -80,7 +80,7 @@ namespace OpenPaint.Utility
                 default:
                     break;
             }
-            //对于一般的图片，只有一帧，动态图片是有多帧的。
+            //For general pictures, there is only one frame, dynamic pictures are multiple frames.
             encoder.Frames.Add(BitmapFrame.Create(bitmapRender));
             if (!Directory.Exists(System.IO.Path.GetDirectoryName(outputPath)))
                 Directory.CreateDirectory(System.IO.Path.GetDirectoryName(outputPath));
@@ -88,7 +88,7 @@ namespace OpenPaint.Utility
                 encoder.Save(file);
         }
         /// <summary>
-        /// 另存为，返回保存后的文件名
+        /// Save as, returns the saved file name
         /// </summary>
         /// <param name="element"></param>
         public static string SaveAs(BitmapSource bitmap, string path)
@@ -104,13 +104,13 @@ namespace OpenPaint.Utility
             return null;
         }
         /// <summary>
-        /// 打开图片，返回图片路径
+        /// Open the image and return to the image path
         /// </summary>
         /// <returns></returns>
         public static string Open()
         {
             System.Windows.Forms.OpenFileDialog ofd = new System.Windows.Forms.OpenFileDialog();
-            ofd.Filter = "PNG文件(*.png)|*.png|JPG文件(*.jpg)|*.jpg|BMP文件(*.bmp)|*.bmp|GIF文件(*.gif)|*.gif|TIF文件(*.tif)|*.tif";
+            ofd.Filter = "PNG(*.png)|*.png|JPG(*.jpg)|*.jpg|BMP(*.bmp)|*.bmp|GIF(*.gif)|*.gif|TIF(*.tif)|*.tif";
             if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 return ofd.FileName;
@@ -118,7 +118,7 @@ namespace OpenPaint.Utility
             return null;
         }
         /// <summary>
-        /// 创建图像文件的副本，解决文件被占用的问题
+        /// Create a copy of the image file to solve the problem that the file is occupied
         /// </summary>
         /// <param name="imagePath"></param>
         /// <returns></returns>

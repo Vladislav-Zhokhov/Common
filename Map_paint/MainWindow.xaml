@@ -48,9 +48,9 @@
         <CommandBinding Command="SaveAs" Executed="SaveAsCommand_Executed"  CanExecute="CanSaveAsCommandExecuted"/>
     </Window.CommandBindings>
     <DockPanel>
-        <!-- 菜单栏 -->
+        <!-- Menu bar -->
         <Menu DockPanel.Dock="Top">
-            <MenuItem Header="文件(_F)">
+            <MenuItem Header="File">
                 <MenuItem Command="New"/>
                 <MenuItem Command="Open"/>
                 <MenuItem Command="Save"/>
@@ -58,9 +58,9 @@
             </MenuItem>
         </Menu>
 
-        <!-- 菜单栏以外的区域 -->
+        <!-- Areas outside the menu bar -->
         <Grid>
-            <!-- 分成三个部分，中间有两个分割条 -->
+            <!-- Divided into three parts, there are two split bars in the middle-->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="12.418"/>
                 <ColumnDefinition Width="143.582"/>
@@ -75,9 +75,9 @@
 
             <DockPanel Grid.Column="0" Grid.ColumnSpan="2">
                 <WrapPanel DockPanel.Dock="Top">
-                    <Button Click="AddLayer_Click">新建图层</Button>
-                    <Button Click="DeleteLayer_Click">删除图层</Button>
-                    <Button Click="Debug_Click">测试图层</Button>
+                    <Button Click="AddLayer_Click">New layer</Button>
+                    <Button Click="DeleteLayer_Click">Deleting a layer</Button>
+                    <Button Click="Debug_Click">Test layers</Button>
                 </WrapPanel>
 
                 <ListBox Name="layerList" SelectedIndex="0" ItemsSource="{Binding SelectedItem.Content.Layers, ElementName=tabBoard}">
@@ -98,17 +98,17 @@
             </DockPanel>
 
             <DockPanel Grid.Column="3">
-                <!--颜色选择器-->
+                <!--Color picker-->
                 <ctl:ColorPicker x:Name="colorPicker" DockPanel.Dock="Top"/>
 
-                <!--画笔大小-->
+                <!--Brush size-->
                 <Grid Margin="10" DockPanel.Dock="Top">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="0.5*"/>
                         <ColumnDefinition Width="2*"/>
                         <ColumnDefinition Width="0.5*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Text="画笔大小"/>
+                    <TextBlock Text="Brush size"/>
                     <Slider Name="penSize" Minimum="1" Maximum="100" Value="0" Grid.Column="1"
                                 IsSnapToTickEnabled="True" TickFrequency="1"/>
                     <TextBox Text="{Binding ElementName=penSize, Path=Value}" Grid.Column="2" Grid.Row="0"/>

@@ -9,7 +9,7 @@ using System.Windows.Media;
 namespace OpenPaint
 {
     /// <summary>
-    /// 画布，画布是用来绘制图形的，永远在最上方
+    /// Canvas, canvas is used to draw graphics, always at the top
     /// </summary>
     class Canvas : System.Windows.Controls.InkCanvas
     {

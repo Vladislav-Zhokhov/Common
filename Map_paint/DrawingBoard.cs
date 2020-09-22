@@ -22,26 +22,26 @@ namespace OpenPaint
     using System.Reflection;
     using OpenPaint.Utility;
     /// <summary>
-    /// 画板，一个画板可以有很多图层
-    /// 实际上一个画板对应一副图像
+    /// Drawing board,a drawing board can have many layers
+    /// In fact, a drawing board corresponds to an image.
     /// </summary>
     class DrawingBoard : Label
     {
-        // 画布，图层容器
+        // Canvas, layer container
         Canvas inkCanvas;
 
         /// <summary>
-        /// 当前绘制的图形
+        /// Currently drawn graph
         /// </summary>
         DrawingVisual shape = null;
 
         /// <summary>
-        /// 画板对应的图像描述信息
+        /// Image description information corresponding to the artboard
         /// </summary>
         public Utility.BitmapDescription BitmapDescription { get; set; }
 
         /// <summary>
-        /// 画板至少拥有一个图层
+        /// The artboard has at least one layer
         /// </summary>
         public DrawingBoard(Utility.BitmapDescription bitmapDescription)
         {
@@ -60,52 +60,52 @@ namespace OpenPaint
             this.AddLayer();
         }
 
-        #region 图层
-/// <summary>
-        /// 图层容器，用来通知更改
+#region Layers
+        /// <summary>
+        /// Layer container, used to notify changes
         /// </summary>
         ObservableCollection<Layer> layers = new ObservableCollection<Layer>();
         public ObservableCollection<Layer> Layers { get { return layers; } }
 
         /// <summary>
-        /// 添加一个图层
+        /// Add a layer
         /// </summary>
         public void AddLayer()
         {
             Layer layer = new Layer((int)inkCanvas.Width, (int)inkCanvas.Height);
-            // 新建的图层显示在上面，所以是插入到0位置
+            // The new layer is displayed on it,so it is inserted into the 0 position
             inkCanvas.Children.Add(layer);
             this.layers.Insert(0, layer);
         }
 
         internal void DeleteLayer(Layer layer)
         {
-            // 至少要有1个图层
+            // There must be at least 1 layer
             if (this.layers.Count > 1)
             {
                 inkCanvas.Children.Remove(layer);
                 this.layers.Remove(layer);
             }
         }
-#endregion
+        #endregion
 
-        #region 图层相关事件
+        #region Layer related events
 
         Point startPoint;
         /// <summary>
-        /// 在鼠标左键按下时创建图形
+        /// Create graphics when the Left Mouse Button is pressed
         /// </summary>
         /// <param name="e"></param>
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
         {
             base.OnMouseLeftButtonDown(e);
 
-            // 只有规则图形才创建DrawingVisual对象
+            // Only rule graphics are created DrawingVisual Objects
             if ((int)DrawingMode >= (int)Shapes.DrawingMode.Line)
             {
-                // 利用反射创建特定实例
+                // Create specific instances with reflection
                 shape = new DrawingVisual();
-                // 添加到图层中
+                // Add to layer
                 CurrentLayer.AddVisual(shape);
 
                 startPoint = e.GetPosition(inkCanvas);
@@ -113,7 +113,7 @@ namespace OpenPaint
         }
 
         /// <summary>
-        /// 在鼠标移动时，重新渲染图形
+        /// Re-render the graphics as the mouse moves
         /// </summary>
         /// <param name="e"></param>
         protected override void OnMouseMove(MouseEventArgs e)
@@ -145,20 +145,20 @@ namespace OpenPaint
         }
 
         /// <summary>
-        /// 鼠标松开时，完成一次绘图，将图形移动到当前图层
+        /// When the mouse is released, the drawing is completed once, moving the drawing to the current layer
         /// </summary>
         /// <param name="e"></param>
         protected override void OnMouseUp(System.Windows.Input.MouseButtonEventArgs e)
         {
             base.OnMouseUp(e);
 
-            // 如果不是规则图形则需要添加到图层中
+            // If it is not a regular graph, you need to add it to the layer
             if (DrawingMode == Shapes.DrawingMode.Pen)
             {
                 InkPresenter inkPresenter = new InkPresenter();
                 inkPresenter.Strokes = inkCanvas.Strokes;
                 CurrentLayer.AddUIElement(inkPresenter);
-                // 重新创建Stroke对象
+                // Re-create Stroke objects
                 inkCanvas.Strokes = new StrokeCollection();
             }
             else
@@ -173,7 +173,7 @@ namespace OpenPaint
         #endregion
 
         /// <summary>
-        /// 绘画模式
+        /// Painting mode
         /// </summary>
         public DrawingMode DrawingMode
         {
@@ -189,18 +189,18 @@ namespace OpenPaint
         {
             DrawingMode drawingMode = (DrawingMode)e.NewValue;
             var drawingBoard = d as DrawingBoard;
-            // 绘制规则图形
+            // Draw rule graphics
             if (drawingMode != DrawingMode.Pen)
                 drawingBoard.inkCanvas.EditingMode = InkCanvasEditingMode.None;
             else
             {
-                // 设置绘画模式
+                // Set painting mode
                 drawingBoard.inkCanvas.EditingMode = InkCanvasEditingMode.Ink;
             }
         }
 
         /// <summary>
-        /// 当前图层
+        /// Current layer
         /// </summary>
         public Layer CurrentLayer
         {
@@ -214,7 +214,7 @@ namespace OpenPaint
 
 
         /// <summary>
-        /// 绘画颜色
+        /// Painting colors
         /// </summary>
         public Color Color
         {
@@ -235,7 +235,7 @@ namespace OpenPaint
 
 
         /// <summary>
-        /// 画笔大小
+        /// Brush size
         /// </summary>
         public double PenThickness
         {
@@ -265,7 +265,7 @@ namespace OpenPaint
         }
 
         /// <summary>
-        /// 获取画板上的图像
+        /// Get the image on the artboard
         /// </summary>
         /// <returns></returns>
         internal BitmapSource ToBitmap()
@@ -281,11 +281,12 @@ namespace OpenPaint
             this.BitmapDescription.Name = filename;
         }
         /// <summary>
-        /// 保存图像，返回图像文件名
+        /// Save the image, return the image file name
         /// </summary>
         internal string Save()
         {
-            // 根据文档名称判断是否有该文件，如果有的话就直接覆盖，没有就弹出保存对话框
+            // According to the document name to determine whether there is the file,
+            //  if there is a direct overwrite,no pop-up Save dialog box
             var bmpDesc = BitmapDescription;
             if (System.IO.File.Exists(bmpDesc.Name))
                 BitmapHelper.Save(ToBitmap(), bmpDesc.Name);
@@ -294,7 +295,7 @@ namespace OpenPaint
             return bmpDesc.Name;
         }
         /// <summary>
-        /// 图像另存为
+        /// Save image as
         /// </summary>
         internal void SaveAs()
         {
