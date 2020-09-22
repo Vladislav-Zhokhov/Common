@@ -84,6 +84,9 @@
     <Compile Include="Windows\DannyePoTipuZrkWindow.xaml.cs">
       <DependentUpon>DannyePoTipuZrkWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\KonfigRLI.xaml.cs">
+      <DependentUpon>KonfigRLI.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\lineControl.xaml.cs">
       <DependentUpon>lineControl.xaml</DependentUpon>
     </Compile>
@@ -122,6 +125,10 @@
     <Page Include="Windows\DannyePoTipuZrkWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\KonfigRLI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\lineControl.xaml">
       <SubType>Designer</SubType>
