@@ -119,7 +119,7 @@
                 </MenuItem>
                 <MenuItem Header="Селекция по виду ВО" Click="MenuItem_Click"/>
                 <MenuItem Header="Характеристики целей" Click="MenuItem_Click2"/>
-                <MenuItem Header="Таблица команд" />
+                <MenuItem Header="Таблица команд" Click="MenuItem_Click_1" />
                 <MenuItem Header="Координаты курсора" />
                 <MenuItem Header="След трассы..." />
 

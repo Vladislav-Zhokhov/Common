@@ -44,5 +44,10 @@ namespace Barnaul.Windows
             System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
             Application.Current.Shutdown();
         }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            new CommandTable().ShowDialog();
+        }
     }
 }

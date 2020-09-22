@@ -81,6 +81,9 @@
     <Compile Include="Windows\Characteristics.xaml.cs">
       <DependentUpon>Characteristics.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\CommandTable.xaml.cs">
+      <DependentUpon>CommandTable.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\DannyePoTipuZrkWindow.xaml.cs">
       <DependentUpon>DannyePoTipuZrkWindow.xaml</DependentUpon>
     </Compile>
@@ -122,6 +125,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\Characteristics.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\CommandTable.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
