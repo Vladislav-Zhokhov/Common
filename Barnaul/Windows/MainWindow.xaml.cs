@@ -36,7 +36,7 @@ namespace Barnaul.Windows
         }
         private void MenuItem_Click2(object sender, RoutedEventArgs e)
         {
-            new Characteristics().ShowDialog();
+            new GoalCharacteristics().ShowDialog();
         }
 
         private void restart(object sender, RoutedEventArgs e)

@@ -84,6 +84,9 @@
     <Compile Include="Windows\DannyePoTipuZrkWindow.xaml.cs">
       <DependentUpon>DannyePoTipuZrkWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\GoalCharacteristics.xaml.cs">
+      <DependentUpon>GoalCharacteristics.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\KonfigRLI.xaml.cs">
       <DependentUpon>KonfigRLI.xaml</DependentUpon>
     </Compile>
@@ -123,6 +126,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\DannyePoTipuZrkWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\GoalCharacteristics.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
