@@ -6,6 +6,7 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:sps="clr-namespace:OpenPaint.Shapes"
         Title="MainWindow" Height="1080" Width="1920"
+        xmlns:ZoomAndPan="clr-namespace:ZoomAndPan;assembly=ZoomAndPan"
         WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Window.Resources>
         <local:ToolStateToIntConverter x:Key="ToolStateToIntConverter"/>
@@ -52,6 +53,7 @@
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="File">
                 <MenuItem Command="New"/>
+                <!--<MenuItem Command="NewDrag" Header="Создать подвижный"/>-->
                 <MenuItem Command="Open"/>
                 <MenuItem Command="Save"/>
                 <MenuItem Command="SaveAs"/>
@@ -63,17 +65,18 @@
             <!-- Divided into three parts, there are two split bars in the middle-->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="12.418"/>
-                <ColumnDefinition Width="143.582"/>
+                <ColumnDefinition Width="11.582"/>
+                <ColumnDefinition Width="132"/>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <GridSplitter Grid.Column="2"/>
-            <GridSplitter Grid.Column="4"/>
+            <GridSplitter Grid.Column="3" Margin="0,0,0,0.04"/>
+            <GridSplitter Grid.Column="5" Grid.ColumnSpan="2" Margin="0.207,0,1523,0.04"/>
 
-            <DockPanel Grid.Column="0" Grid.ColumnSpan="2">
+            <DockPanel Grid.Column="0" Grid.ColumnSpan="3" Margin="0,0,0,0.04">
                 <WrapPanel DockPanel.Dock="Top">
                     <Button Click="AddLayer_Click">New layer</Button>
                     <Button Click="DeleteLayer_Click">Deleting a layer</Button>
@@ -97,7 +100,7 @@
                 </ListBox>
             </DockPanel>
 
-            <DockPanel Grid.Column="3">
+            <DockPanel Grid.Column="4" Grid.ColumnSpan="2" Margin="0,0,1.793,0.04">
                 <!--Color picker-->
                 <ctl:ColorPicker x:Name="colorPicker" DockPanel.Dock="Top"/>
 
@@ -119,10 +122,40 @@
             </DockPanel>
 
 
-            <TabControl Grid.Column="5" Name="tabBoard" Background="Gray" SelectedIndex="0">
-                
+            <TabControl Grid.Column="6" Name="tabBoard" Background="Gray" SelectedIndex="0" Margin="0.207,0,0,0.04">
+                <!--<TabItem>
+                    <TabItem.Header>
+                        "123"
+                    </TabItem.Header>
+                    <TabItem.Content>
+                        <ScrollViewer
+                            CanContentScroll="True"
+                            VerticalScrollBarVisibility="Visible"
+                            HorizontalScrollBarVisibility="Visible"
+                            >
+                            <ZoomAndPan:ZoomAndPanControl
+                                x:Name="zoomAndPanControl"
+                                ContentScale="{Binding Source={x:Static local:DataModel.Instance}, Path=ContentScale, Mode=TwoWay}"
+                                ContentOffsetX="{Binding Source={x:Static local:DataModel.Instance}, Path=ContentOffsetX, Mode=TwoWay}"
+                                ContentOffsetY="{Binding Source={x:Static local:DataModel.Instance}, Path=ContentOffsetY, Mode=TwoWay}"
+                                ContentViewportWidth="{Binding Source={x:Static local:DataModel.Instance}, Path=ContentViewportWidth, Mode=OneWayToSource}"
+                                ContentViewportHeight="{Binding Source={x:Static local:DataModel.Instance}, Path=ContentViewportHeight, Mode=OneWayToSource}"
+                                Background="DimGray"
+                                >
+                                <Canvas
+                                    x:Name="content"
+                                    Width="500"
+                                    Height="500"
+                                    Background="White"
+                                    >
+                                    <Rectangle Height="14" Width="18" Fill="Green"></Rectangle>
+                                </Canvas>
+                            </ZoomAndPan:ZoomAndPanControl>
+                        </ScrollViewer>
+                    </TabItem.Content>
+                </TabItem>-->
             </TabControl>
-            
+
         </Grid>
     </DockPanel>
 </Window>

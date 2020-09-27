@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using OpenPaint.Shapes;
 
 namespace OpenPaint
 {
@@ -33,16 +34,25 @@ namespace OpenPaint
                 return (DrawingBoard)((TabItem)this.tabBoard.SelectedItem).Content;
             }
         }
+        private DraggableBoard CurrentDraggableBoard
+        {
+            get
+            {
+                return (DraggableBoard)((TabItem)this.tabBoard.SelectedItem).Content;
+            }
+        }
 
         private void AddLayer_Click(object sender, RoutedEventArgs e)
         {
-            CurrentDrawingBoard.AddLayer();
+            //CurrentDrawingBoard.AddLayer();
+            CurrentDraggableBoard.AddLayer();
         }
 
         private void DeleteLayer_Click(object sender, RoutedEventArgs e)
         {
             var index = this.layerList.SelectedIndex;
-            CurrentDrawingBoard.DeleteLayer((Layer)this.layerList.SelectedItem);
+            //CurrentDrawingBoard.DeleteLayer((Layer)this.layerList.SelectedItem);
+            CurrentDraggableBoard.DeleteLayer((Layer)this.layerList.SelectedItem);
             this.layerList.SelectedIndex = index == this.layerList.Items.Count ? index - 1 : index;
         }
 
@@ -86,6 +96,39 @@ namespace OpenPaint
 
             this.layerList.SelectedIndex = 0;
         }
+        private void NewDraggableBoard(BitmapDescription bitmapDescription)
+        {
+            DraggableBoard draggableBoard = new DraggableBoard(bitmapDescription);
+            // Creating data bindings for artboards
+            Binding binding = new Binding();        // Current layer
+            binding.Source = this.layerList;
+            binding.Path = new PropertyPath("SelectedItem");
+            draggableBoard.SetBinding(DraggableBoard.CurrentLayerProperty, binding);
+
+            binding = new Binding();        // Painting mode
+            binding.Source = this.toolList;
+            binding.Path = new PropertyPath("SelectedItem");
+            draggableBoard.SetBinding(DraggableBoard.DrawingModeProperty, binding);
+
+            binding = new Binding();        // Painting colors
+            binding.Source = this.colorPicker;
+            binding.Path = new PropertyPath("SelectedColor");
+            draggableBoard.SetBinding(DraggableBoard.ColorProperty, binding);
+
+            binding = new Binding();        // Brush size
+            binding.Source = this.penSize;
+            binding.Path = new PropertyPath("Value");
+            draggableBoard.SetBinding(DraggableBoard.PenThicknessProperty, binding);
+
+            TabItem tabItem = new TabItem();
+            tabItem.Header = bitmapDescription.Name;
+            tabItem.Content = draggableBoard;
+
+            this.tabBoard.Items.Add(tabItem);
+            this.tabBoard.SelectedItem = tabItem;
+
+            this.layerList.SelectedIndex = 0;
+        }
         /// <summary>
         /// New file
         /// </summary>
@@ -97,7 +140,8 @@ namespace OpenPaint
             dialog.Owner = this;
             if (dialog.ShowDialog() == true)
             {
-                NewDrawingBoard(dialog.BitmapDescription);
+                //NewDrawingBoard(dialog.BitmapDescription);
+                NewDraggableBoard(dialog.BitmapDescription);
             }
         }
         /// <summary>
@@ -121,7 +165,8 @@ namespace OpenPaint
                 // Creating a canvas
                 NewDrawingBoard(bitmapDescription);
                 // Draw an image to a layer on the canvas
-                CurrentDrawingBoard.AddBitmap(imgSource);
+                //CurrentDrawingBoard.AddBitmap(imgSource);
+                CurrentDraggableBoard.AddBitmap(imgSource);
             }
         }
         /// <summary>
@@ -131,7 +176,8 @@ namespace OpenPaint
         /// <param name="e"></param>
         private void SaveCommand_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            var filename = CurrentDrawingBoard.Save();
+            //var filename = CurrentDrawingBoard.Save();
+            var filename = CurrentDraggableBoard.Save();
             if (filename != null)
                 ((TabItem)tabBoard.SelectedItem).Header = filename;
         }
@@ -142,7 +188,8 @@ namespace OpenPaint
         /// <param name="e"></param>
         private void CanSaveCommandExecuted(object sender, CanExecuteRoutedEventArgs e)
         {
-            e.CanExecute = (tabBoard.SelectedItem != null && CurrentDrawingBoard != null);
+            //e.CanExecute = (tabBoard.SelectedItem != null && CurrentDrawingBoard != null);
+            e.CanExecute = (tabBoard.SelectedItem != null && CurrentDraggableBoard != null);
         }
         /// <summary>
         /// Save file as
@@ -151,7 +198,8 @@ namespace OpenPaint
         /// <param name="e"></param>
         private void SaveAsCommand_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            CurrentDrawingBoard.SaveAs();
+            //CurrentDrawingBoard.SaveAs();
+            CurrentDraggableBoard.SaveAs();
         }
         /// <summary>
         /// Can I save as
@@ -160,7 +208,8 @@ namespace OpenPaint
         /// <param name="e"></param>
         private void CanSaveAsCommandExecuted(object sender, CanExecuteRoutedEventArgs e)
         {
-            e.CanExecute = (tabBoard.SelectedItem != null && CurrentDrawingBoard != null);
+            //e.CanExecute = (tabBoard.SelectedItem != null && CurrentDrawingBoard != null);
+            e.CanExecute = (tabBoard.SelectedItem != null && CurrentDraggableBoard != null);
         }
     }
 }

@@ -10,6 +10,7 @@ namespace OpenPaint.Shapes
     public enum DrawingMode
     {
         None = 0,
+        DragAndZoom,
         Pen,        // Соответствующие чернила
         //GestureOnly,
         //InkAndGesture,

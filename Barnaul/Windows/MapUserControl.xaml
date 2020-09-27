@@ -1,10 +1,10 @@
 ﻿<UserControl x:Class="Barnaul.Windows.MapUserControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Barnaul.Windows"
-             mc:Ignorable="d" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             UseLayoutRounding="True"
+             mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.RowDefinitions>
@@ -39,8 +39,9 @@
                 <ToggleButton Content=" ДР " IsChecked="False"/>
                 <ToggleButton Content=" ТР " IsChecked="True"/>
             </StackPanel>
+            <!-- Место для кнопок рисовалки -->
         </StackPanel>
-        <Grid  Grid.Row="1" Background="Black" Margin="1" MouseLeftButtonDown="MouseDown" MouseLeftButtonUp="MouseUp" MouseRightButtonDown="button1_Click" >
+        <Grid Grid.Row="1" Background="Black" Margin="1" MouseLeftButtonDown="MouseDown" MouseLeftButtonUp="MouseUp" MouseRightButtonDown="button1_Click" >
             <Image x:Name="pictureBox1" Height="100" Width="100" Source="Profile_picture_of_TehPlaneFreak.png" Margin="-900,0,0,0" RenderTransformOrigin="0.5,0.5">
                 <Image.RenderTransform>
                     <TransformGroup>
@@ -53,11 +54,18 @@
             </Image>
             <Image x:Name="pictureBox2" Source="305-3056634_out-of-stock-clipart.png" Margin="0,200,0,0" Width="10" Height="10" Opacity="0"/>
             <Grid Margin="0">
-                <Canvas x:Name="Background"
+                <!--<Canvas x:Name="Background"
                     Width="{Binding ActualWidth, ElementName=MainCanvas}"
                     Height="{Binding ActualHeight, ElementName=MainCanvas}"
                     SizeChanged="UpdateBackPattern" MouseMove="move">
-                </Canvas>
+                </Canvas>-->
+                <Viewbox Grid.Row="1" HorizontalAlignment="Left"  MaxHeight="500">
+                    <Canvas x:Name="Background"
+                            Width="{Binding ActualWidth, ElementName=MainCanvas}"
+                            Height="{Binding ActualHeight, ElementName=MainCanvas}"
+                            SizeChanged="UpdateBackPattern" MouseMove="move">
+                    </Canvas>
+                </Viewbox>
             </Grid>
         </Grid>
     </Grid>
