@@ -81,20 +81,35 @@
     <Compile Include="Windows\Characteristics.xaml.cs">
       <DependentUpon>Characteristics.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\CommandTable.xaml.cs">
-      <DependentUpon>CommandTable.xaml</DependentUpon>
+    <Compile Include="Windows\ControlR910M.xaml.cs">
+      <DependentUpon>ControlR910M.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ControlRST.xaml.cs">
+      <DependentUpon>ControlRST.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ControlABCK.xaml.cs">
+      <DependentUpon>ControlABCK.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\DannyePoTipuZrkWindow.xaml.cs">
       <DependentUpon>DannyePoTipuZrkWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\GoalCharacteristics.xaml.cs">
-      <DependentUpon>GoalCharacteristics.xaml</DependentUpon>
+    <Compile Include="Windows\DannyeSN.xaml.cs">
+      <DependentUpon>DannyeSN.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\KonfigRLI.xaml.cs">
       <DependentUpon>KonfigRLI.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\lineControl.xaml.cs">
       <DependentUpon>lineControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\M_498.xaml.cs">
+      <DependentUpon>M_498.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\M_498_2.xaml.cs">
+      <DependentUpon>M_498_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Navigate.xaml.cs">
+      <DependentUpon>Navigate.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Select.xaml.cs">
       <DependentUpon>Select.xaml</DependentUpon>
@@ -104,12 +119,6 @@
     </Compile>
     <Compile Include="Windows\MapUserControl.xaml.cs">
       <DependentUpon>MapUserControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\SpeedUpdate.xaml.cs">
-      <DependentUpon>SpeedUpdate.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\Trace.xaml.cs">
-      <DependentUpon>Trace.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\VvodComandi2ZWindow.xaml.cs">
       <DependentUpon>VvodComandi2ZWindow.xaml</DependentUpon>
@@ -126,6 +135,9 @@
     <Compile Include="Windows\ZapretPeredachiWindow.xaml.cs">
       <DependentUpon>ZapretPeredachiWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\H911.xaml.cs">
+      <DependentUpon>H911.xaml</DependentUpon>
+    </Compile>
     <Page Include="Windows\AbonentTrassaWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -134,7 +146,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\CommandTable.xaml">
+    <Page Include="Windows\ControlR910M.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ControlRST.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ControlABCK.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -142,7 +162,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\GoalCharacteristics.xaml">
+    <Page Include="Windows\DannyeSN.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -151,6 +171,18 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\lineControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\M_498.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\M_498_2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Navigate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -178,14 +210,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\SpeedUpdate.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\Trace.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Windows\VvodComandi2ZWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -203,6 +227,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\ZapretPeredachiWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\H911.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

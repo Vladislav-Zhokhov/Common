@@ -2,6 +2,7 @@
 
 namespace Barnaul.Windows
 {
+    using Microsoft.Xaml.Behaviors.Core;
     using ViewModels;
 
     public partial class MainWindow : Window
@@ -36,7 +37,7 @@ namespace Barnaul.Windows
         }
         private void MenuItem_Click2(object sender, RoutedEventArgs e)
         {
-            new GoalCharacteristics().ShowDialog();
+            new Characteristics().ShowDialog();
         }
 
         private void restart(object sender, RoutedEventArgs e)
@@ -45,39 +46,29 @@ namespace Barnaul.Windows
             Application.Current.Shutdown();
         }
 
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        private void MenuItem_ClickNavigate(object sender, RoutedEventArgs e)
         {
-            new CommandTable().ShowDialog();
+            new Navigate().ShowDialog();
         }
-
-        private void Gk_Click(object sender, RoutedEventArgs e)
+        private void MenuItem_ClickH911(object sender, RoutedEventArgs e)
         {
-            Mest.IsChecked = false;
+            new H911().ShowDialog();
         }
-
-        private void Mest_Click(object sender, RoutedEventArgs e)
+        private void MenuItem_ClickM_498(object sender, RoutedEventArgs e)
         {
-            Gk.IsChecked = false;
+            new M_498().ShowDialog();
         }
-
-        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        private void MenuItem_ClickContolABCK(object sender, RoutedEventArgs e)
         {
-            new Trace().ShowDialog();
+            new ControlABCK().ShowDialog();
         }
-
-        private void Reper_Click(object sender, RoutedEventArgs e)
+        private void MenuItem_ClickControlRST(object sender, RoutedEventArgs e)
         {
-            Ts.IsChecked = false;
+            new ControlRST().ShowDialog();
         }
-
-        private void Ts_Click(object sender, RoutedEventArgs e)
+        private void MenuItem_ClickControlR910M(object sender, RoutedEventArgs e)
         {
-            Reper.IsChecked = false;
-        }
-
-        private void MenuItem_Click_3(object sender, RoutedEventArgs e)
-        {
-            new SpeedUpdate().ShowDialog();
+            new ControlR910M().ShowDialog();
         }
     }
 }

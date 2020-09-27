@@ -1,0 +1,107 @@
+﻿<Window x:Class="Barnaul.Windows.Navigate"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Barnaul.Windows"
+      mc:Ignorable="d"
+      Title="Система навигации" Width="503.592" Height="421.333">
+
+    <Grid Margin="0,0,2,1.5">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="603.592"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="Информация о техническом состоянии системы навигации" HorizontalAlignment="Left" Height="95" VerticalAlignment="Top" Width="459.592" Margin="10,0,0,0">
+            <Grid HorizontalAlignment="Left" Height="73.999" VerticalAlignment="Top" Width="444" Margin="0,10,0,-8.959">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="91*"/>
+                    <ColumnDefinition Width="57*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="24.667"/>
+                </Grid.RowDefinitions>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Спутниковая система навигации (СС)" VerticalAlignment="Top" Grid.Row="2" Height="20" Width="270" Margin="0,1,0,0"/>
+                <TextBox HorizontalAlignment="Left" Height="20" Margin="95.333,0,0,0" TextWrapping="Wrap" Text="Исправен" VerticalAlignment="Top" Width="75.667" Grid.Column="1"/>
+
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Картограф системы навигации (СТНО)" VerticalAlignment="Top" Height="20" Width="270"/>
+                <TextBox HorizontalAlignment="Left" Height="20" Margin="95.333,0,0,0" TextWrapping="Wrap" Text="Исправен" VerticalAlignment="Top" Width="75.667" Grid.Column="1" Grid.Row="1"/>
+
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Лазерный гироскопический измеритель (ЛГИ)" VerticalAlignment="Top" Height="20" Width="270" Grid.Row="1"/>
+                <TextBox Height="20" Margin="95.333,0,0,0" TextWrapping="Wrap" Text="Исправен" VerticalAlignment="Top" Grid.Column="1" Grid.Row="2"/>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Слово состояния системы навигации" HorizontalAlignment="Left" Height="202" VerticalAlignment="Top" Width="459.592" Margin="10,100,0,0">
+            <Grid HorizontalAlignment="Left" Height="162.999" VerticalAlignment="Top" Width="444" Margin="0,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="91*"/>
+                    <ColumnDefinition Width="57*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                </Grid.RowDefinitions>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Предварительная готовность СН к навигации" VerticalAlignment="Top" Grid.Row="2" Height="20" Width="270"/>
+                <TextBox HorizontalAlignment="Left" Height="20" Margin="95.333,-0.184,0,0" TextWrapping="Wrap" Text="Достоверно" VerticalAlignment="Top" Width="75.667" Grid.Column="1"/>
+
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Достоверность данных" VerticalAlignment="Top" Height="20" Width="270" Margin="0,-0.184,0,0"/>
+                <TextBox HorizontalAlignment="Left" Height="20" Margin="95.333,0,0,0" TextWrapping="Wrap" Text="Стоянка" VerticalAlignment="Top" Width="75.667" Grid.Column="1" Grid.Row="1"/>
+
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Признак движения" VerticalAlignment="Top" Height="20" Width="270" Grid.Row="1"/>
+                <TextBox Height="24.146" Margin="95.333,0.52,0,0" TextWrapping="Wrap" Text="Комплексн." VerticalAlignment="Top" Grid.Column="1" Grid.Row="5"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Окончательная готовность СН к навигации" VerticalAlignment="Top" Grid.Row="3" Height="20" Width="270"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Исходное ориентирование" VerticalAlignment="Top" Grid.Row="4" Height="20" Width="270"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Тип координат" VerticalAlignment="Top" Grid.Row="5" Height="20" Width="270"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Количество спутников Глонасс" VerticalAlignment="Top" Grid.Row="6" Height="20" Width="270"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Количество спутников Навстар" VerticalAlignment="Top" Grid.Row="7" Height="20" Width="270" Margin="0,0.26,0,0"/>
+                <TextBox Height="20" Margin="95.333,0,0,0" TextWrapping="Wrap" Text="Готова" VerticalAlignment="Top" Grid.Column="1" Grid.Row="3"/>
+                <TextBox Margin="95.333,0.26,0,0" TextWrapping="Wrap" Text="3" Grid.Column="1" Grid.Row="6"/>
+                <TextBox Height="20" Margin="95.333,0,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Grid.Column="1" Grid.Row="7"/>
+                <TextBox Height="20" Margin="95.333,0,0,0" TextWrapping="Wrap" Text="Готова" VerticalAlignment="Top" Grid.Column="1" Grid.Row="2"/>
+                <TextBox Height="20" Margin="95.333,0,0,0" TextWrapping="Wrap" Text="100 %" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="4"/>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Время и дата" HorizontalAlignment="Left" Height="63" VerticalAlignment="Top" Width="310.759" Margin="10,307,0,0"/>
+        <Grid HorizontalAlignment="Left" Height="100" Margin="10,307,0,0" VerticalAlignment="Top" Width="294.259">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="21*"/>
+                <RowDefinition Height="26*"/>
+                <RowDefinition Height="59*"/>
+            </Grid.RowDefinitions>
+            <TextBox Height="20" Margin="10,1.334,258.592,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Grid.Row="1"/>
+            <TextBox Height="20" Margin="40.667,1.334,227.925,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Grid.Row="1"/>
+            <TextBox Height="20" Margin="71.334,1.334,182.258,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Grid.Row="1"/>
+            <TextBox Height="20" Margin="237.925,1.334,30.667,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Grid.Row="1"/>
+            <TextBox Height="20" Margin="207.258,1.334,61.334,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Grid.Row="1"/>
+            <TextBox Height="20" Margin="268.592,1.334,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Grid.Row="1"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="10,0,0,35.66" TextWrapping="Wrap" Text="день" VerticalAlignment="Bottom" Width="36.667" Grid.Row="2" MinHeight="20"/>
+            <TextBlock HorizontalAlignment="Left" Margin="40.667,0,0,35.66" TextWrapping="Wrap" Text="мес" Width="25.667" Grid.Row="2" MinHeight="20" RenderTransformOrigin="0.987,0.433"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="71.334,0,0,0" TextWrapping="Wrap" Text="год" VerticalAlignment="Top" Width="40.667" Grid.Row="2" MinHeight="20" RenderTransformOrigin="1.443,0.233"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="207.258,0,0,0" TextWrapping="Wrap" Text="часы" VerticalAlignment="Top" Width="30.667" Grid.Row="2" MinHeight="20"/>
+            <TextBlock HorizontalAlignment="Left" Margin="237.925,0,0,35.66" TextWrapping="Wrap" Text="мин" Width="25.667" Grid.Row="2" MinHeight="20"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="268.592,0,0,0" TextWrapping="Wrap" Text="сек" VerticalAlignment="Top" Width="25.667" Grid.Row="2" MinHeight="20"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="63" Margin="342,307,0,0" VerticalAlignment="Top" Width="125.592">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="11*"/>
+            </Grid.RowDefinitions>
+            <Button Content="Данные СН" HorizontalAlignment="Left" Height="20" Margin="12,10,0,0" VerticalAlignment="Top" Width="89" Click="ClickDannyeSN"/>
+            <Button Content="Выход" HorizontalAlignment="Left" Height="20" Margin="12,13,0,0" Grid.Row="1" VerticalAlignment="Top" Width="89" Click="Close_Click"/>
+        </Grid>
+
+    </Grid>
+</Window>

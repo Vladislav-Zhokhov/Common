@@ -98,12 +98,12 @@
             </MenuItem>
             <MenuItem Header="ФК" >
                 <MenuItem Header="Контрольная сумма" InputGestureText="Ctrl+81" />
-                <MenuItem Header="Навигация" InputGestureText="Ctrl+82" />
-                <MenuItem Header="Н911" InputGestureText="Ctrl+83" />
-                <MenuItem Header="М-498РЛИ" InputGestureText="Ctrl+84" />
-                <MenuItem Header="АВСК-У" InputGestureText="Ctrl+85" />
-                <MenuItem Header="РСТ" InputGestureText="Ctrl+86" />
-                <MenuItem Header="Р910М" InputGestureText="Ctrl+89" />
+                <MenuItem Header="Навигация" InputGestureText="Ctrl+82" Click="MenuItem_ClickNavigate"/>
+                <MenuItem Header="Н911" InputGestureText="Ctrl+83" Click="MenuItem_ClickH911"/>
+                <MenuItem Header="М-498РЛИ" InputGestureText="Ctrl+84" Click="MenuItem_ClickM_498"/>
+                <MenuItem Header="АВСК-У" InputGestureText="Ctrl+85" Click="MenuItem_ClickContolABCK"/>
+                <MenuItem Header="РСТ" InputGestureText="Ctrl+86" Click="MenuItem_ClickControlRST"/>
+                <MenuItem Header="Р910М" InputGestureText="Ctrl+89" Click="MenuItem_ClickControlR910M" />
 
             </MenuItem>
             <MenuItem Header="Выход">
@@ -119,21 +119,18 @@
                 </MenuItem>
                 <MenuItem Header="Селекция по виду ВО" Click="MenuItem_Click"/>
                 <MenuItem Header="Характеристики целей" Click="MenuItem_Click2"/>
-                <MenuItem Header="Таблица команд" Click="MenuItem_Click_1" />
-                <MenuItem Header="Координаты курсора" >
-                    <MenuItem Name="Gk" Header="Прямоугольные(ГК)" IsCheckable="True" IsChecked="True" Click="Gk_Click" />
-                    <MenuItem Name="Mest" Header="Прямоугольные(местные)" IsCheckable="True" Click="Mest_Click" />
-                </MenuItem>
-                <MenuItem Header="След трассы..." Click="MenuItem_Click_2" />
+                <MenuItem Header="Таблица команд" />
+                <MenuItem Header="Координаты курсора" />
+                <MenuItem Header="След трассы..." />
 
             </MenuItem>
 
             <MenuItem Header="Парметры">
                 <MenuItem Header="Репер" >
-                    <MenuItem Name="Reper" Header="Репер" IsCheckable="True" IsChecked="True" Click="Reper_Click"/>
-                    <MenuItem Name="Ts" Header="Своя ТС" IsCheckable="True" Click="Ts_Click"/>
+                    <MenuItem Header="Репер"/>
+                    <MenuItem Header="Своя ТС"/>
                 </MenuItem>
-                <MenuItem Header="Темп обновления..." Click="MenuItem_Click_3" />
+                <MenuItem Header="Темп обновления..." />
                 <MenuItem Header="Рисование..." />
                 <MenuItem Header="Шрифт" />
                 <MenuItem Header="Сохранить" />
