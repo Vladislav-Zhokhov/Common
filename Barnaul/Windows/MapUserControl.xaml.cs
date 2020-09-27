@@ -6,17 +6,74 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using OpenPaint.Shapes;
 
 namespace Barnaul.Windows
 {
     public partial class MapUserControl : UserControl
     {
-        bool isDown = false;
+        bool isDragging = false;
+        const double gridSpace = 100.0;
+        DrawingMode drawingMode = DrawingMode.DragAndZoom;
+        Point startPoint;
+
         public MapUserControl()
         {
             InitializeComponent();
-            UpdateBackPattern(null, null);
+            DrawGridLines();
+            SetContentOffset();
+
+            double zoom = Convert.ToInt32(combo.Text) / 120.0;
+            Point center = new Point((zap.Content as Canvas).ActualWidth / 2, (zap.Content as Canvas).ActualHeight / 2);
+            zap.ZoomAboutPoint(zoom, center);
         }
+
+        private void SetContentOffset()
+        {
+            Canvas canvas = zap.Content as Canvas;
+            double cw = canvas.Width;
+            double ch = canvas.Height;
+            double w = 800;
+            double h = 450;
+
+            zap.ContentOffsetX = (cw - w) / 2.0;
+            zap.ContentOffsetY = (ch - h) / 2.0;
+        }
+
+        private void DrawGridLines()
+        {
+            Canvas canvas = zap.Content as Canvas;
+            double w = canvas.Width;
+            double h = canvas.Height;
+
+            for (double x = 0.0; x <= w; x += gridSpace)
+            {
+                var line = new System.Windows.Shapes.Line()
+                {
+                    X1 = x,
+                    X2 = x,
+                    Y1 = 0.0,
+                    Y2 = h,
+                    Stroke = Brushes.White,
+                    StrokeThickness = 1
+                };
+                canvas.Children.Add(line);
+            }
+            for (double y = 0.0; y <= h; y += gridSpace)
+            {
+                var line = new System.Windows.Shapes.Line()
+                {
+                    X1 = 0.0,
+                    X2 = w,
+                    Y1 = y,
+                    Y2 = y,
+                    Stroke = Brushes.White,
+                    StrokeThickness = 1
+                };
+                canvas.Children.Add(line);
+            }
+        }
+
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -32,110 +89,76 @@ namespace Barnaul.Windows
             
         }
 
-
-        private new void MouseDown(object sender, MouseButtonEventArgs e)
+        private void zoomAndPanControl_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            isDown = true;
+            if (drawingMode == DrawingMode.DragAndZoom)
+                isDragging = true;
+            startPoint = e.GetPosition(zap.Content as Canvas);
         }
 
-        private new void MouseUp(object sender, MouseButtonEventArgs e)
+        private void zoomAndPanControl_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            isDown = false;
+            isDragging = false;
         }
 
-        void UpdateBackPattern(object sender, SizeChangedEventArgs e)
+        private void zoomAndPanControl_MouseMove(object sender, MouseEventArgs e)
         {
-            var w = Background.ActualWidth;
-            var h = Background.ActualHeight;
-
-            Background.Children.Clear();
-            for (int x = 20; x < w; x += Convert.ToInt32(combo.Text) / 2)
+            if (isDragging)
             {
-                AddLineToBackground(x, 0, x, h);
-                AddNumberToBackground(x, x);
-            }
-            for (int y = 20; y < h; y += Convert.ToInt32(combo.Text) / 2)
-            {
-                AddLineToBackground(0, y, w, y);
-                AddNumber2ToBackground(y, y);
+                Point endPoint = e.GetPosition(zap.Content as Canvas);
+                Vector dragOffset = endPoint - startPoint;
+                zap.ContentOffsetX -= dragOffset.X;
+                zap.ContentOffsetY -= dragOffset.Y;
             }
         }
 
-        void AddLineToBackground(double x1, double y1, double x2, double y2)
-        {
-            var line = new Line()
-            {
-                X1 = x1,
-                Y1 = y1,
-                X2 = x2,
-                Y2 = y2,
-                Stroke = Brushes.White,
-                StrokeThickness = 1,
-                SnapsToDevicePixels = true
-            };
-            line.SetValue(RenderOptions.EdgeModeProperty, EdgeMode.Aliased);
-            Background.Children.Add(line);
-        }
-        void AddNumberToBackground(double x1, double i)
-        {
-            var text = new TextBlock
-            {
-                Margin = new Thickness(x1-5, 0, 0, 0),
-                Text = i.ToString(),
-                Foreground = Brushes.White
-            };
-            Background.Children.Add(text);
-        }
-        void AddNumber2ToBackground(double y1, double i)
-        {
-            var text = new TextBlock
-            {
-                Margin = new Thickness(0, y1-10, 0, 0),
-                Text = i.ToString(),
-                Foreground = Brushes.White
-            };
-            Background.Children.Add(text);
+        //void UpdateBackPattern(object sender, SizeChangedEventArgs e)
+        //{
+        //    var w = Background.ActualWidth;
+        //    var h = Background.ActualHeight;
 
-        }
+        //    Background.Children.Clear();
+        //    for (int x = 20; x < w; x += Convert.ToInt32(combo.Text) / 2)
+        //    {
+        //        AddLineToBackground(x, 0, x, h);
+        //        AddNumberToBackground(x, x);
+        //    }
+        //    for (int y = 20; y < h; y += Convert.ToInt32(combo.Text) / 2)
+        //    {
+        //        AddLineToBackground(0, y, w, y);
+        //        AddNumber2ToBackground(y, y);
+        //    }
+        //}
+
+        //void AddNumberToBackground(double x1, double i)
+        //{
+        //    var text = new TextBlock
+        //    {
+        //        Margin = new Thickness(x1-5, 0, 0, 0),
+        //        Text = i.ToString(),
+        //        Foreground = Brushes.White
+        //    };
+        //    Background.Children.Add(text);
+        //}
+        //void AddNumber2ToBackground(double y1, double i)
+        //{
+        //    var text = new TextBlock
+        //    {
+        //        Margin = new Thickness(0, y1-10, 0, 0),
+        //        Text = i.ToString(),
+        //        Foreground = Brushes.White
+        //    };
+        //    Background.Children.Add(text);
+
+        //}
 
         private void Combo_DropDownClosed(object sender, EventArgs e)
         {
-            var w = Background.ActualWidth;
-            var h = Background.ActualHeight;
-
-            Background.Children.Clear();
-            for (int x = 20; x < w; x += Convert.ToInt32(combo.Text) / 2)
-            {
-                AddLineToBackground(x, 0, x, h);
-                AddNumberToBackground(x, x);
-            }
-            for (int y = 20; y < h; y += Convert.ToInt32(combo.Text) / 2)
-            {
-                AddLineToBackground(0, y, w, y);
-                AddNumber2ToBackground(y, y);
-            }
+            double zoom = Convert.ToInt32(combo.Text) / 120.0;
+            Point center = new Point((zap.Content as Canvas).ActualWidth / 2, (zap.Content as Canvas).ActualHeight / 2);
+            zap.ZoomAboutPoint(zoom, center);
         }
 
-        private void move(object sender, MouseEventArgs e)
-            {
-            if (isDown)
-            {
-                var w = Background.ActualWidth;
-                var h = Background.ActualHeight;
-
-                Background.Children.Clear();
-                for (int x = ((int)Mouse.GetPosition(this).X / 5 % (Convert.ToInt32(combo.Text) / 2)); x < w; x += Convert.ToInt32(combo.Text) / 2)
-                {
-                    AddLineToBackground(x, 0, x, h);
-                    AddNumberToBackground(x, x + Mouse.GetPosition(this).X / 5);
-                }
-                for (int y = ((int)Mouse.GetPosition(this).Y / 5 % (Convert.ToInt32(combo.Text) / 2)); y < h; y += Convert.ToInt32(combo.Text) / 2)
-                {
-                    AddLineToBackground(0, y, w, y);
-                    AddNumber2ToBackground(y, y + Mouse.GetPosition(this).Y / 5);
-                }
-            }
-        }
         private async void button1_Click(object sender, EventArgs e)
         {
             int flag = -900;
@@ -160,7 +183,7 @@ namespace Barnaul.Windows
                 tr.Children.Add(sktr);
                 tr.Children.Add(rot);
                 imageControl.RenderTransform = tr;
-                Background.Children.Add(imageControl);
+                //Background.Children.Add(imageControl);
             }
             for (int i = 1; i < 8 & BR.IsChecked == true; i++)
             {
@@ -178,7 +201,7 @@ namespace Barnaul.Windows
                 tr.Children.Add(sktr);
                 tr.Children.Add(rot);
                 imageControl.RenderTransform = tr;
-                Background.Children.Add(imageControl);
+                //Background.Children.Add(imageControl);
             }
             for (int i = 0;i<100;i++)
             {

@@ -182,6 +182,5 @@
             <Button ToolTip="Вскрытие пеленга" Content="ВП" Margin="0,0,0,-0.4" Click="Button_Click"/>
         </StackPanel>
         <windiws:MapUserControl Grid.Row="2" Loaded="MapUserControl_Loaded" />
-        <!--<controls:InfiniteCanvas Name="canvas"/>-->
     </Grid>
 </Window>
