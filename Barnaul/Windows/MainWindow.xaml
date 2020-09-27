@@ -119,18 +119,21 @@
                 </MenuItem>
                 <MenuItem Header="Селекция по виду ВО" Click="MenuItem_Click"/>
                 <MenuItem Header="Характеристики целей" Click="MenuItem_Click2"/>
-                <MenuItem Header="Таблица команд" />
-                <MenuItem Header="Координаты курсора" />
-                <MenuItem Header="След трассы..." />
+                <MenuItem Header="Таблица команд" Click="MenuItem_Click_1" />
+                <MenuItem Header="Координаты курсора" >
+                    <MenuItem Name="Gk" Header="Прямоугольные(ГК)" IsCheckable="True" IsChecked="True" Click="Gk_Click" />
+                    <MenuItem Name="Mest" Header="Прямоугольные(местные)" IsCheckable="True" Click="Mest_Click" />
+                </MenuItem>
+                <MenuItem Header="След трассы..." Click="MenuItem_Click_2" />
 
             </MenuItem>
 
             <MenuItem Header="Парметры">
                 <MenuItem Header="Репер" >
-                    <MenuItem Header="Репер"/>
-                    <MenuItem Header="Своя ТС"/>
+                    <MenuItem Name="Reper" Header="Репер" IsCheckable="True" IsChecked="True" Click="Reper_Click"/>
+                    <MenuItem Name="Ts" Header="Своя ТС" IsCheckable="True" Click="Ts_Click"/>
                 </MenuItem>
-                <MenuItem Header="Темп обновления..." />
+                <MenuItem Header="Темп обновления..." Click="MenuItem_Click_3" />
                 <MenuItem Header="Рисование..." />
                 <MenuItem Header="Шрифт" />
                 <MenuItem Header="Сохранить" />
