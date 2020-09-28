@@ -72,7 +72,7 @@
             </MenuItem>
             <MenuItem Header="Управление">
                 <MenuItem Header="Установить режимы" InputGestureText="Сtrl+51" Click="MenuItem_Click_7" />
-                <MenuItem Header="Ввод сектора ответственности" InputGestureText="Сtrl+52" />
+                <MenuItem Header="Ввод сектора ответственности" InputGestureText="Сtrl+52" Click="MenuItem_Click_8" />
                 <MenuItem Header="Ввод зоны ответственности" InputGestureText="Сtrl+53" />
                 <MenuItem Header="Выдать ДКРУ" InputGestureText="Сtrl+54" />
                 <MenuItem Header="Выдать реперную точку" InputGestureText="Сtrl+55" />

@@ -120,5 +120,11 @@ namespace Barnaul.Windows
         {
             new ControlMods().ShowDialog();
         }
+
+        private void MenuItem_Click_8(object sender, RoutedEventArgs e)
+        {
+            new EntSecResp().ShowDialog();
+
+        }
     }
 }
