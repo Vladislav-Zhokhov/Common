@@ -102,6 +102,9 @@
     <Compile Include="Windows\DannyeSN.xaml.cs">
       <DependentUpon>DannyeSN.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\DateTime.xaml.cs">
+      <DependentUpon>DateTime.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\DKRU.xaml.cs">
       <DependentUpon>DKRU.xaml</DependentUpon>
     </Compile>
@@ -201,6 +204,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\DannyeSN.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\DateTime.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

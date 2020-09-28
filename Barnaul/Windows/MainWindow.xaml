@@ -30,7 +30,7 @@
                 <MenuItem Header="Ввод местоположения" InputGestureText="Сtrl+13" Click="MenuItem_Click_6" />
                 <MenuItem Header="Регламент М-498РЛИ" InputGestureText="Сtrl+14" />
                 <MenuItem Header="TTX подчиненного" InputGestureText="Сtrl+15" Click="MenuItem_Click_12" />
-                <MenuItem Header="Дата/Время" InputGestureText="Сtrl+16" />
+                <MenuItem Header="Дата/Время" InputGestureText="Сtrl+16" Click="MenuItem_Click_13" />
                 <MenuItem Header="Пересчёт координат">
                     <MenuItem Header="Геодезические в Гаусса-Крюгера" InputGestureText="Сtrl+17" />
                     <MenuItem Header="Гаусса-Крюгера в геодезические" InputGestureText="Сtrl+18" />

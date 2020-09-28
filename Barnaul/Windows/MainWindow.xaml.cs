@@ -146,5 +146,10 @@ namespace Barnaul.Windows
         {
             new TTXSubordinate().ShowDialog();
         }
+
+        private void MenuItem_Click_13(object sender, RoutedEventArgs e)
+        {
+            new DateTime().ShowDialog();
+        }
     }
 }

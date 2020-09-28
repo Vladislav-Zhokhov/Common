@@ -1,0 +1,69 @@
+﻿<Window x:Class="Barnaul.Windows.DateTime"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Barnaul.Windows"
+        mc:Ignorable="d"
+        Title="DateTime" Height="280.8" Width="263.2">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="212*"/>
+            <RowDefinition Height="39*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.ColumnSpan="2">
+            <GroupBox Margin="10">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Дата и время от CH" Width="150" TextAlignment="Center"></TextBlock>
+                        <TextBlock Text="Система" Width="60" TextAlignment="Center"></TextBlock>
+                    </StackPanel>
+                    <StackPanel IsEnabled="False" Orientation="Horizontal" Margin="15,0,0,0">
+                        <TextBox Text="00.00.00" Margin="0" Width="55" TextAlignment="Center"></TextBox>
+                        <TextBox Text="00:00:00" Margin="9,0,0,0" Width="55" TextAlignment="Center"></TextBox>
+                        <TextBox Text="Данных нет" Margin="12,0,0,0" Width="70" TextAlignment="Center"></TextBox>
+                    </StackPanel>
+                    <TextBlock Margin="15,5,0,0" Text="Поправка на местное время" />
+                    <StackPanel Orientation="Horizontal">
+                        <ComboBox SelectedIndex="0" Margin="15,0,0,0" Width="45">
+                            <ComboBoxItem Content="1"></ComboBoxItem>
+                        </ComboBox>
+                        <TextBlock Text="ч" Margin="5,0,0,0"></TextBlock>
+                        <ComboBox SelectedIndex="0" Width="45" Margin="70,0,0,0">
+                            <ComboBoxItem Content="0"></ComboBoxItem>
+                        </ComboBox>
+                        <TextBlock Text="мин" Margin="5,0,0,0"></TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Margin="10">
+                <StackPanel Margin="15,5,0,0">
+                    <CheckBox Content="Запрет обновления от CH"></CheckBox>
+                    <TextBlock Text="Ввод системных даты и времени"></TextBlock>
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                        <TextBlock Text="дд" Margin="10,0,0,0" Width="19" TextAlignment="Center"></TextBlock>
+                        <TextBlock Text="мм" Margin="10,0,0,0" Width="19" TextAlignment="Center"></TextBlock>
+                        <TextBlock Text="гг" Margin="10,0,0,0" Width="19" TextAlignment="Center"></TextBlock>
+                        <TextBlock Text="чч" Margin="15 ,0,0,0" Width="19" TextAlignment="Center"></TextBlock>
+                        <TextBlock Text="мм" Margin="10,0,0,0" Width="19" TextAlignment="Center"></TextBlock>
+                        <TextBlock Text="сс" Margin="10,0,0,0" Width="19" TextAlignment="Center"></TextBlock>
+                    </StackPanel>
+                    <StackPanel IsEnabled="False" Orientation="Horizontal" Margin="0,5">
+                        <TextBox Text="19" Margin="10,0,0,0" Width="19"></TextBox>
+                        <TextBox Text="04" Margin="10,0,0,0" Width="19"></TextBox>
+                        <TextBox Text="12" Margin="10,0,0,0" Width="19"></TextBox>
+                        <TextBox Text="11" Margin="15,0,0,0" Width="19"></TextBox>
+                        <TextBox Text="45" Margin="10,0,0,0" Width="19"></TextBox>
+                        <TextBox Text="03" Margin="10,0,0,0" Width="19"></TextBox>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+        <Button Content="Ввод" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="20" Width="60" />
+        <Button Content="Отказ" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="20" Width="60" />
+    </Grid>
+</Window>
