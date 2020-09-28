@@ -81,6 +81,9 @@
     <Compile Include="Windows\Characteristics.xaml.cs">
       <DependentUpon>Characteristics.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\CommandTable.xaml.cs">
+      <DependentUpon>CommandTable.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ControlR910M.xaml.cs">
       <DependentUpon>ControlR910M.xaml</DependentUpon>
     </Compile>
@@ -95,6 +98,9 @@
     </Compile>
     <Compile Include="Windows\DannyeSN.xaml.cs">
       <DependentUpon>DannyeSN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\GoalCharacteristics.xaml.cs">
+      <DependentUpon>GoalCharacteristics.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\KonfigRLI.xaml.cs">
       <DependentUpon>KonfigRLI.xaml</DependentUpon>
@@ -119,6 +125,12 @@
     </Compile>
     <Compile Include="Windows\MapUserControl.xaml.cs">
       <DependentUpon>MapUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SpeedUpdate.xaml.cs">
+      <DependentUpon>SpeedUpdate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Trace.xaml.cs">
+      <DependentUpon>Trace.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\VvodComandi2ZWindow.xaml.cs">
       <DependentUpon>VvodComandi2ZWindow.xaml</DependentUpon>
@@ -146,6 +158,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\CommandTable.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Windows\ControlR910M.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -165,6 +181,10 @@
     <Page Include="Windows\DannyeSN.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\GoalCharacteristics.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\KonfigRLI.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -209,6 +229,14 @@
     <Page Include="Windows\MapUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SpeedUpdate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Trace.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\VvodComandi2ZWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

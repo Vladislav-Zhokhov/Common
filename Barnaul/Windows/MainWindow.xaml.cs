@@ -37,7 +37,7 @@ namespace Barnaul.Windows
         }
         private void MenuItem_Click2(object sender, RoutedEventArgs e)
         {
-            new Characteristics().ShowDialog();
+            new GoalCharacteristics().ShowDialog();
         }
 
         private void restart(object sender, RoutedEventArgs e)
@@ -45,7 +45,37 @@ namespace Barnaul.Windows
             System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
             Application.Current.Shutdown();
         }
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e) 
+        {
+            new CommandTable().ShowDialog();
+        }
 
+        private void Gk_Click(object sender, RoutedEventArgs e)
+        {
+            Mest.IsChecked = false;
+        }
+
+        private void Mest_Click(object sender, RoutedEventArgs e)
+        {
+            Gk.IsChecked = false;
+        }
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            new Trace().ShowDialog();
+        }
+
+        private void Reper_Click(object sender, RoutedEventArgs e)
+        {
+            Ts.IsChecked = false;
+        }
+        private void Ts_Click(object sender, RoutedEventArgs e)
+        {
+            Reper.IsChecked = false;
+        }
+        private void MenuItem_Click_3(object sender, RoutedEventArgs e)
+        {
+            new SpeedUpdate().ShowDialog();
+        }
         private void MenuItem_ClickNavigate(object sender, RoutedEventArgs e)
         {
             new Navigate().ShowDialog();
@@ -69,6 +99,21 @@ namespace Barnaul.Windows
         private void MenuItem_ClickControlR910M(object sender, RoutedEventArgs e)
         {
             new ControlR910M().ShowDialog();
+        }
+
+        private void MenuItem_Click_4(object sender, RoutedEventArgs e)
+        {
+            new KonfigRLI().ShowDialog();
+        }
+
+        private void MenuItem_Click_5(object sender, RoutedEventArgs e)
+        {
+            new KonfigRLI().ShowDialog();
+        }
+
+        private void MenuItem_Click_6(object sender, RoutedEventArgs e)
+        {
+            new KonfigRLI(2).ShowDialog();
         }
     }
 }

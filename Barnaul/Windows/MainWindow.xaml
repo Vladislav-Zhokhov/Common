@@ -25,9 +25,9 @@
                 </Style>
             </Menu.Resources>
             <MenuItem Header="Подготовка">
-                <MenuItem Header="Конфигурация сети РЛИ" InputGestureText="Сtrl+11" />
-                <MenuItem Header="Ввод реперов" InputGestureText="Сtrl+12" />
-                <MenuItem Header="Ввод местоположения" InputGestureText="Сtrl+13" />
+                <MenuItem Header="Конфигурация сети РЛИ" InputGestureText="Сtrl+11" Click="MenuItem_Click_4" />
+                <MenuItem Header="Ввод реперов" InputGestureText="Сtrl+12" Click="MenuItem_Click_5" />
+                <MenuItem Header="Ввод местоположения" InputGestureText="Сtrl+13" Click="MenuItem_Click_6" />
                 <MenuItem Header="Регламент М-498РЛИ" InputGestureText="Сtrl+14" />
                 <MenuItem Header="TTX подчиненного" InputGestureText="Сtrl+15" />
                 <MenuItem Header="Дата/Время" InputGestureText="Сtrl+16" />
@@ -119,18 +119,20 @@
                 </MenuItem>
                 <MenuItem Header="Селекция по виду ВО" Click="MenuItem_Click"/>
                 <MenuItem Header="Характеристики целей" Click="MenuItem_Click2"/>
-                <MenuItem Header="Таблица команд" />
-                <MenuItem Header="Координаты курсора" />
-                <MenuItem Header="След трассы..." />
-
+                <MenuItem Header="Таблица команд" Click="MenuItem_Click_1" />
+                <MenuItem Header="Координаты курсора" >
+                    <MenuItem Name="Gk" Header="Прямоугольные(ГК)" IsCheckable="True" IsChecked="True" Click="Gk_Click" />
+                    <MenuItem Name="Mest" Header="Прямоугольные(местные)" IsCheckable="True" Click="Mest_Click" />
+                </MenuItem>
+                <MenuItem Header="След трассы..." Click="MenuItem_Click_2" />
             </MenuItem>
 
             <MenuItem Header="Парметры">
                 <MenuItem Header="Репер" >
-                    <MenuItem Header="Репер"/>
-                    <MenuItem Header="Своя ТС"/>
+                    <MenuItem Name="Reper" Header="Репер" IsCheckable="True" IsChecked="True" Click="Reper_Click"/>
+                    <MenuItem Name="Ts" Header="Своя ТС" IsCheckable="True" Click="Ts_Click"/>
                 </MenuItem>
-                <MenuItem Header="Темп обновления..." />
+                <MenuItem Header="Темп обновления..." Click="MenuItem_Click_3" />
                 <MenuItem Header="Рисование..." />
                 <MenuItem Header="Шрифт" />
                 <MenuItem Header="Сохранить" />

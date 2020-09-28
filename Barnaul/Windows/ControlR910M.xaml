@@ -31,10 +31,10 @@
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Порог это-сигналов" VerticalAlignment="Top" Margin="0,5,0,0" Height="20" Grid.Row="8"/>
                 <Button Content="Ввод" HorizontalAlignment="Left" VerticalAlignment="Top" Width="43.667" Margin="266.333,5,0,0" Height="20"/>
                 <TextBox HorizontalAlignment="Left" Height="20" Margin="233.333,5,0,0" TextWrapping="Wrap" Text="12" VerticalAlignment="Top" Width="28"/>
-                <CheckBox Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="290,6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="20"/>
-                <CheckBox Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="290,6,0,0" VerticalAlignment="Top" Width="20" Grid.Row="2"/>
-                <CheckBox Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="290,6,0,0" VerticalAlignment="Top" Width="20" Grid.Row="3"/>
-                <CheckBox Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="290,6,0,0" VerticalAlignment="Top" Width="20" Grid.Row="4"/>
+                <CheckBox Content="" HorizontalAlignment="Left" Height="19" Margin="290,6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="20"/>
+                <CheckBox Content="" HorizontalAlignment="Left" Height="19" Margin="290,6,0,0" VerticalAlignment="Top" Width="20" Grid.Row="2"/>
+                <CheckBox Content="" HorizontalAlignment="Left" Height="19" Margin="290,6,0,0" VerticalAlignment="Top" Width="20" Grid.Row="3"/>
+                <CheckBox Content="" HorizontalAlignment="Left" Height="19" Margin="290,6,0,0" VerticalAlignment="Top" Width="20" Grid.Row="4"/>
                 <Button Content="Ввод" HorizontalAlignment="Left" VerticalAlignment="Top" Width="43.667" Margin="266.333,5,0,0" Height="20" Grid.Row="7"/>
                 <TextBox HorizontalAlignment="Left" Height="20" Margin="233.333,5,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="28" Grid.Row="7"/>
                 <ComboBox SelectedIndex="0" HorizontalAlignment="Left" Height="20" Margin="224,5,0,0" Grid.Row="8" VerticalAlignment="Top" Width="86">
