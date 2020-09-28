@@ -1,0 +1,82 @@
+﻿<Window x:Class="Barnaul.Windows.EntAreaResp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Barnaul.Windows"
+        mc:Ignorable="d"
+        Title="EntAreaResp" Height="343.2" Width="282.8">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Grid.ColumnSpan="3" Margin="10">
+            <StackPanel Margin="5
+                        ">
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
+                    <TextBlock Text="Номер подчиненного" Width="162"/>
+                    <TextBox Width="50" Text="1"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
+                    <TextBlock Text="Номер зоны" Width="162"/>
+                    <TextBox Width="50" Text="0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
+                    <TextBlock Text="X1" Width="40"/>
+                    <TextBox Width="50" Text="0"/>
+                    <TextBlock Text="m" Width="30" Margin="2,0,0,0"/>
+                    <TextBlock Text="Y1" Width="40"/>
+                    <TextBox Width="50" Text="0"/>
+                    <TextBlock Text="m" Width="30" Margin="2,0,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
+                    <TextBlock Text="X2" Width="40"/>
+                    <TextBox Width="50" Text="0"/>
+                    <TextBlock Text="m" Width="30" Margin="2,0,0,0"/>
+                    <TextBlock Text="Y2" Width="40"/>
+                    <TextBox Width="50" Text="0"/>
+                    <TextBlock Text="m" Width="30" Margin="2,0,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
+                    <TextBlock Text="X3" Width="40"/>
+                    <TextBox Width="50" Text="0"/>
+                    <TextBlock Text="m" Width="30" Margin="2,0,0,0"/>
+                    <TextBlock Text="Y3" Width="40"/>
+                    <TextBox Width="50" Text="0"/>
+                    <TextBlock Text="m" Width="30" Margin="2,0,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
+                    <TextBlock Text="X4" Width="40"/>
+                    <TextBox Width="50" Text="0"/>
+                    <TextBlock Text="m" Width="30" Margin="2,0,0,0"/>
+                    <TextBlock Text="Y4" Width="40"/>
+                    <TextBox Width="50" Text="0"/>
+                    <TextBlock Text="m" Width="30" Margin="2,0,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
+                    <TextBlock Text="Hmin" Width="40"/>
+                    <TextBox Width="50" Text="0"/>
+                    <TextBlock Text="m" Width="30" Margin="2,0,0,0"/>
+                    <TextBlock Text="Hmax" Width="40"/>
+                    <TextBox Width="50" Text="0"/>
+                    <TextBlock Text="m" Width="30" Margin="2,0,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
+                    <TextBlock Text="Команда" Width="162"/>
+                    <TextBox Width="50" Text="1"/>
+                </StackPanel>
+                <CheckBox IsChecked="True" Margin="0,10,0,0" Content="Выдать в КС" ></CheckBox>
+                <CheckBox Margin="0,10,0,0" Content="Сброс зоны" ></CheckBox>
+            </StackPanel>
+        </GroupBox>
+        <Button Width="60" Height="20" Grid.Column="0" Grid.Row="1" Content="Ввод"></Button>
+        <Button Width="60" Height="20" Grid.Column="1" Grid.Row="1" Content="Текст"></Button>
+        <Button Width="60" Height="20" Grid.Column="2" Grid.Row="1" Content="Отказ"></Button>
+    </Grid>
+</Window>

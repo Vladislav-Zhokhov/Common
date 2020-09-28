@@ -126,5 +126,10 @@ namespace Barnaul.Windows
             new EntSecResp().ShowDialog();
 
         }
+
+        private void MenuItem_Click_9(object sender, RoutedEventArgs e)
+        {
+            new EntAreaResp().ShowDialog();
+        }
     }
 }
