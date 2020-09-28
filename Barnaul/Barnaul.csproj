@@ -114,6 +114,9 @@
     <Compile Include="Windows\EntSecResp.xaml.cs">
       <DependentUpon>EntSecResp.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\GeodezGaus.xaml.cs">
+      <DependentUpon>GeodezGaus.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\GoalCharacteristics.xaml.cs">
       <DependentUpon>GoalCharacteristics.xaml</DependentUpon>
     </Compile>
@@ -220,6 +223,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\EntSecResp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\GeodezGaus.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

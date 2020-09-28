@@ -32,7 +32,7 @@
                 <MenuItem Header="TTX подчиненного" InputGestureText="Сtrl+15" Click="MenuItem_Click_12" />
                 <MenuItem Header="Дата/Время" InputGestureText="Сtrl+16" Click="MenuItem_Click_13" />
                 <MenuItem Header="Пересчёт координат">
-                    <MenuItem Header="Геодезические в Гаусса-Крюгера" InputGestureText="Сtrl+17" />
+                    <MenuItem Header="Геодезические в Гаусса-Крюгера" InputGestureText="Сtrl+17" Click="MenuItem_Click_14" />
                     <MenuItem Header="Гаусса-Крюгера в геодезические" InputGestureText="Сtrl+18" />
                     <MenuItem Header="Геодезические Гаусса-Крюгера" InputGestureText="Сtrl+19" />
                 </MenuItem>

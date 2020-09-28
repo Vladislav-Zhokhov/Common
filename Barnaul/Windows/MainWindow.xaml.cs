@@ -151,5 +151,10 @@ namespace Barnaul.Windows
         {
             new DateTime().ShowDialog();
         }
+
+        private void MenuItem_Click_14(object sender, RoutedEventArgs e)
+        {
+            new GeodezGaus().ShowDialog();
+        }
     }
 }
