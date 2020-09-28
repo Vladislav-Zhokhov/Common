@@ -136,5 +136,10 @@ namespace Barnaul.Windows
         {
             new DKRU().ShowDialog();
         }
+
+        private void MenuItem_Click_11(object sender, RoutedEventArgs e)
+        {
+            new StandingPointIssue().ShowDialog();
+        }
     }
 }

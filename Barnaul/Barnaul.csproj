@@ -141,6 +141,9 @@
     <Compile Include="Windows\SpeedUpdate.xaml.cs">
       <DependentUpon>SpeedUpdate.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\StandingPointIssue.xaml.cs">
+      <DependentUpon>StandingPointIssue.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Trace.xaml.cs">
       <DependentUpon>Trace.xaml</DependentUpon>
     </Compile>
@@ -261,6 +264,10 @@
     <Page Include="Windows\SpeedUpdate.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\StandingPointIssue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\Trace.xaml">
       <Generator>MSBuild:Compile</Generator>
