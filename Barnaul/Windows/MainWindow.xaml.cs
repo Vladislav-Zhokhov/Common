@@ -131,5 +131,10 @@ namespace Barnaul.Windows
         {
             new EntAreaResp().ShowDialog();
         }
+
+        private void MenuItem_Click_10(object sender, RoutedEventArgs e)
+        {
+            new DKRU().ShowDialog();
+        }
     }
 }
