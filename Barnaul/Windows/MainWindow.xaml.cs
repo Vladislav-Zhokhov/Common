@@ -141,5 +141,10 @@ namespace Barnaul.Windows
         {
             new StandingPointIssue().ShowDialog();
         }
+
+        private void MenuItem_Click_12(object sender, RoutedEventArgs e)
+        {
+            new TTXSubordinate().ShowDialog();
+        }
     }
 }

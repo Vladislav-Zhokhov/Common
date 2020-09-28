@@ -147,6 +147,9 @@
     <Compile Include="Windows\Trace.xaml.cs">
       <DependentUpon>Trace.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\TTXSubordinate.xaml.cs">
+      <DependentUpon>TTXSubordinate.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\VvodComandi2ZWindow.xaml.cs">
       <DependentUpon>VvodComandi2ZWindow.xaml</DependentUpon>
     </Compile>
@@ -272,6 +275,10 @@
     <Page Include="Windows\Trace.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\TTXSubordinate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\VvodComandi2ZWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
