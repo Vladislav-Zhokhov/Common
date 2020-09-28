@@ -115,5 +115,10 @@ namespace Barnaul.Windows
         {
             new KonfigRLI(2).ShowDialog();
         }
+
+        private void MenuItem_Click_7(object sender, RoutedEventArgs e)
+        {
+            new ControlMods().ShowDialog();
+        }
     }
 }

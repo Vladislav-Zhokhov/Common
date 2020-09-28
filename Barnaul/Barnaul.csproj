@@ -84,6 +84,9 @@
     <Compile Include="Windows\CommandTable.xaml.cs">
       <DependentUpon>CommandTable.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\ControlMods.xaml.cs">
+      <DependentUpon>ControlMods.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ControlR910M.xaml.cs">
       <DependentUpon>ControlR910M.xaml</DependentUpon>
     </Compile>
@@ -161,6 +164,10 @@
     <Page Include="Windows\CommandTable.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\ControlMods.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\ControlR910M.xaml">
       <SubType>Designer</SubType>

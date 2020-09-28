@@ -1,0 +1,136 @@
+﻿<Window x:Class="Barnaul.Windows.ControlMods"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Barnaul.Windows"
+        mc:Ignorable="d"
+        Title="ControlMods" Height="408.133" Width="465.6">
+    <Grid Margin="-0.667,0,0.667,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="230*"/>
+            <ColumnDefinition Width="229*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="347*"/>
+            <RowDefinition Height="32*"/>
+        </Grid.RowDefinitions>
+        <GroupBox  Margin="5,10,5,0" Grid.ColumnSpan="2">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Margin="5,0,0,0" >
+                        <CheckBox Content="ВключитьКБД" Margin="0,5,0,0"></CheckBox>
+                        <CheckBox Content="ВключитьЦЦР" Margin="0,5,0,0"></CheckBox>
+                        <CheckBox Content="ВключитьРСО" Margin="0,5,0,0"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Margin="5,0,0,0">
+                        <CheckBox Content="ВыдатьКБД" Margin="0,5,0,0"></CheckBox>
+                        <CheckBox Content="ВыдатьЦЦР" Margin="0,5,0,0"></CheckBox>
+                        <CheckBox Content="ВыдатьРСО" Margin="0,5,0,0"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Margin="10,0,0,0">
+                        <CheckBox Content="АвтКЭС" Margin="0,5,0,0"></CheckBox>
+                        <CheckBox  Margin="0,15,0,0" >
+                            <TextBlock Text="АвтЦУ выдавать только в СО" Width="90" TextWrapping="Wrap" Margin="0,-8,0,0"/>
+                        </CheckBox>
+                    </StackPanel>
+                    <StackPanel Margin="10,0,0,0">
+                        <GroupBox >
+                            <GroupBox.Header>
+                                <TextBlock Text="Задержка Рекомендации" TextWrapping="Wrap" Width="90" TextAlignment="Center"></TextBlock>
+                            </GroupBox.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBox Text="0.0" Width="60" TextAlignment="Center"></TextBox>
+                                <TextBlock Text="сек" Margin="10,0,0,0" ></TextBlock>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <GroupBox Header="Запрет автоматического РСО">
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel>
+                                <CheckBox Content="Абонент 1" Margin="0,5,0,0"/>
+                                <CheckBox Content="Абонент 2" Margin="0,5,0,0"/>
+                                <CheckBox Content="Абонент 3" Margin="0,5,0,0"/>
+                            </StackPanel>
+                            <StackPanel Margin="20,0,10,0">
+                                <CheckBox Content="Абонент 4" Margin="0,5,0,0"/>
+                                <CheckBox Content="Абонент 5" Margin="0,5,0,0"/>
+                                <CheckBox Content="Абонент 6" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="Режимы сосредоточения" Width="235">
+                        <StackPanel Margin="10,2,0,0">
+                            <RadioButton IsChecked="True" Content="Режим 1" Margin="0,5,0,0" Height="15"></RadioButton>
+                            <RadioButton Content="Режим 2" Margin="0,5,0,0" Height="15"></RadioButton>
+                            <RadioButton Content="Режим 3" Margin="0,5,0,0" Height="15"></RadioButton>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel>
+                        <GroupBox Header="Режим базовости">
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel>
+                                    <CheckBox Content="Абонент 1" Margin="0,5,0,0"/>
+                                    <CheckBox Content="Абонент 2" Margin="0,5,0,0"/>
+                                    <CheckBox Content="Абонент 3" Margin="0,5,0,0"/>
+                                </StackPanel>
+                                <StackPanel Margin="20,0,10,0">
+                                    <CheckBox Content="Абонент 4" Margin="0,5,0,0"/>
+                                    <CheckBox Content="Абонент 5" Margin="0,5,0,0"/>
+                                    <CheckBox Content="Абонент 6" Margin="0,5,0,0"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="Запрос помеховой обстановки">
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel>
+                                    <CheckBox Content="Абонент 1" Margin="0,5,0,0"/>
+                                    <CheckBox Content="Абонент 2" Margin="0,5,0,0"/>
+                                    <CheckBox Content="Абонент 3" Margin="0,5,0,0"/>
+                                </StackPanel>
+                                <StackPanel Margin="20,0,10,0">
+                                    <CheckBox Content="Абонент 4" Margin="0,5,0,0"/>
+                                    <CheckBox Content="Абонент 5" Margin="0,5,0,0"/>
+                                    <CheckBox Content="Абонент 6" Margin="0,5,0,0"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                    <GroupBox Header="Режим включения излучения СОЦ" Width="235">
+                        <StackPanel>
+                            <RadioButton IsChecked="True" Margin="0,10,0,0">
+                                <StackPanel>
+                                    <TextBlock Text="Автоматический" Margin="0"></TextBlock>
+                                    <CheckBox Content="Защита от ПРР" Margin="0,5,0,0" IsChecked="True"></CheckBox>
+                                </StackPanel>
+                            </RadioButton>
+                            <RadioButton  Margin="0,20,0,0">
+                                <StackPanel>
+                                    <TextBlock Text="Автоматический"></TextBlock>
+                                    <StackPanel IsEnabled="False" Orientation="Horizontal" Margin="0,4,0,0">
+                                        <StackPanel>
+                                            <CheckBox Content="Абонент 1" Margin="0,5,0,0"/>
+                                            <CheckBox Content="Абонент 2" Margin="0,5,0,0"/>
+                                            <CheckBox Content="Абонент 3" Margin="0,5,0,0"/>
+                                        </StackPanel>
+                                        <StackPanel Margin="20,0,10,0">
+                                            <CheckBox Content="Абонент 4" Margin="0,5,0,0"/>
+                                            <CheckBox Content="Абонент 5" Margin="0,5,0,0"/>
+                                            <CheckBox Content="Абонент 6" Margin="0,5,0,0"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                            </RadioButton>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+        <Button Content="Ввод" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="20" Width="60" />
+        <Button Content="Отказ" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="20" Width="60" />
+    </Grid>
+</Window>
