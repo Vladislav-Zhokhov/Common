@@ -5,7 +5,6 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using OpenPaint.Shapes;
 
 namespace Barnaul.Windows
@@ -149,23 +148,53 @@ namespace Barnaul.Windows
             }
         }
 
-        //void UpdateBackPattern(object sender, SizeChangedEventArgs e)
-        //{
-        //    var w = Background.ActualWidth;
-        //    var h = Background.ActualHeight;
-
-        //    Background.Children.Clear();
-        //    for (int x = 20; x < w; x += Convert.ToInt32(combo.Text) / 2)
-        //    {
-        //        AddLineToBackground(x, 0, x, h);
-        //        AddNumberToBackground(x, x);
-        //    }
-        //    for (int y = 20; y < h; y += Convert.ToInt32(combo.Text) / 2)
-        //    {
-        //        AddLineToBackground(0, y, w, y);
-        //        AddNumber2ToBackground(y, y);
-        //    }
-        //}
+        #region Select Modes
+        private void DragClick(object sender, RoutedEventArgs e)
+        {
+            DragButton.IsChecked = true;
+            PenButton.IsChecked = false;
+            LineButton.IsChecked = false;
+            RectButton.IsChecked = false;
+            CircleButton.IsChecked = false;
+            drawingMode = DrawingMode.DragAndZoom;
+        }
+        private void PenClick(object sender, RoutedEventArgs e)
+        {
+            DragButton.IsChecked = false;
+            PenButton.IsChecked = true;
+            LineButton.IsChecked = false;
+            RectButton.IsChecked = false;
+            CircleButton.IsChecked = false;
+            drawingMode = DrawingMode.Pen;
+        }
+        private void LineClick(object sender, RoutedEventArgs e)
+        {
+            DragButton.IsChecked = false;
+            PenButton.IsChecked = false;
+            LineButton.IsChecked = true;
+            RectButton.IsChecked = false;
+            CircleButton.IsChecked = false;
+            drawingMode = DrawingMode.Line;
+        }
+        private void RectClick(object sender, RoutedEventArgs e)
+        {
+            DragButton.IsChecked = false;
+            PenButton.IsChecked = false;
+            LineButton.IsChecked = false;
+            RectButton.IsChecked = true;
+            CircleButton.IsChecked = false;
+            drawingMode = DrawingMode.Rectangle;
+        }
+        private void CircleClick(object sender, RoutedEventArgs e)
+        {
+            DragButton.IsChecked = false;
+            PenButton.IsChecked = false;
+            LineButton.IsChecked = false;
+            RectButton.IsChecked = false;
+            CircleButton.IsChecked = true;
+            drawingMode = DrawingMode.Ellipse;
+        }
+        #endregion
 
         //void AddNumberToBackground(double x1, double i)
         //{

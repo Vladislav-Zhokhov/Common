@@ -242,5 +242,14 @@
       <Name>ZoomAndPan</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\rect.png" />
+    <Resource Include="Images\circle.png" />
+    <Resource Include="Images\pen.png" />
+    <Resource Include="Images\line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\move.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

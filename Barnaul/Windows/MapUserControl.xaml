@@ -9,6 +9,13 @@
              d:DesignHeight="450" d:DesignWidth="800"
              Loaded="OnLoad"
              >
+    <UserControl.Resources>
+        <Image x:Key="DragImage" Source="C:\Users\wwwmi\github\Common\Barnaul\Images\move.png"/>
+        <Image x:Key="PenImage" Source="C:\Users\wwwmi\github\Common\Barnaul\Images\pen.png"/>
+        <Image x:Key="LineImage" Source="C:\Users\wwwmi\github\Common\Barnaul\Images\line.png"/>
+        <Image x:Key="RectImage" Source="C:\Users\wwwmi\github\Common\Barnaul\Images\rect.png"/>
+        <Image x:Key="CircleImage" Source="C:\Users\wwwmi\github\Common\Barnaul\Images\circle.png"/>
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -32,7 +39,6 @@
             <ComboBox
                 Name="combo"
                 SelectedIndex="0"
-                Height="21.96"
                 VerticalAlignment="Bottom"
                 DropDownClosed="Combo_DropDownClosed"
                 >
@@ -48,7 +54,24 @@
                 <ToggleButton Content=" ДР " IsChecked="False"/>
                 <ToggleButton Content=" ТР " IsChecked="True"/>
             </StackPanel>
-            <!-- Место для кнопок рисовалки -->
+            <!--Говнокодище-->
+            <StackPanel Orientation="Horizontal">
+                <ToggleButton x:Name="DragButton" Content="{StaticResource DragImage}"
+                              Height="22" Width="22" 
+                              Click="DragClick" IsChecked="True"/>
+                <ToggleButton x:Name="PenButton" Content="{StaticResource PenImage}"
+                              Height="22" Width="22"
+                              Click="PenClick" IsChecked="False"/>
+                <ToggleButton x:Name="LineButton" Content="{StaticResource LineImage}"
+                              Height="22" Width="22"
+                              Click="LineClick" IsChecked="False"/>
+                <ToggleButton x:Name="RectButton" Content="{StaticResource RectImage}"
+                              Height="22" Width="22"
+                              Click="RectClick" IsChecked="False"/>
+                <ToggleButton x:Name="CircleButton" Content="{StaticResource CircleImage}"
+                              Height="22" Width="22"
+                              Click="CircleClick" IsChecked="False"/>
+            </StackPanel>
         </StackPanel>
         <Grid Grid.Row="1" Background="Black" Margin="1" MouseRightButtonDown="button1_Click" >
             <Image x:Name="pictureBox1" Height="100" Width="100" Source="Profile_picture_of_TehPlaneFreak.png" Margin="-900,0,0,0" RenderTransformOrigin="0.5,0.5">
