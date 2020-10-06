@@ -17,15 +17,51 @@ namespace Barnaul.Windows
         DrawingMode drawingMode = DrawingMode.DragAndZoom;
         Point startPoint;
 
+        Canvas gridLayer;
+        Canvas drawingLayer;
+        Canvas objectsLayer;
+
         public MapUserControl()
         {
             InitializeComponent();
-            DrawGridLines();
+            AddLayers();
+        }
+
+        void OnLoad(object sender, RoutedEventArgs e)
+        {
             SetContentOffset();
 
             double zoom = Convert.ToInt32(combo.Text) / 120.0;
-            Point center = new Point((zap.Content as Canvas).ActualWidth / 2, (zap.Content as Canvas).ActualHeight / 2);
+            Canvas canvas = zap.Content as Canvas;
+            Point center = new Point(canvas.Width / 2.0, canvas.Height / 2.0);
             zap.ZoomAboutPoint(zoom, center);
+        }
+
+        private void AddLayers()
+        {
+            Canvas canvas = zap.Content as Canvas;
+            double cw = canvas.Width;
+            double ch = canvas.Height;
+
+            gridLayer = new Canvas();
+            drawingLayer = new Canvas();
+            objectsLayer = new Canvas();
+
+            gridLayer.Width = cw;
+            gridLayer.Height = ch;
+            gridLayer.Background = Brushes.Transparent;
+            drawingLayer.Width = cw;
+            drawingLayer.Height = ch;
+            drawingLayer.Background = Brushes.Transparent;
+            objectsLayer.Width = cw;
+            objectsLayer.Height = ch;
+            objectsLayer.Background = Brushes.Transparent;
+
+            canvas.Children.Add(gridLayer);
+            canvas.Children.Add(drawingLayer);
+            canvas.Children.Add(objectsLayer);
+
+            DrawGridLines(gridLayer);
         }
 
         private void SetContentOffset()
@@ -33,16 +69,17 @@ namespace Barnaul.Windows
             Canvas canvas = zap.Content as Canvas;
             double cw = canvas.Width;
             double ch = canvas.Height;
-            double w = 800;
+            double w = 800;     // Размеры самого окна
             double h = 450;
 
             zap.ContentOffsetX = (cw - w) / 2.0;
             zap.ContentOffsetY = (ch - h) / 2.0;
+            //zap.ContentOffsetX = (cw - w) / (2.0 * zap.ContentScale);
+            //zap.ContentOffsetY = (ch - h) / (2.0 * zap.ContentScale);
         }
 
-        private void DrawGridLines()
+        private void DrawGridLines(Canvas canvas)
         {
-            Canvas canvas = zap.Content as Canvas;
             double w = canvas.Width;
             double h = canvas.Height;
 
