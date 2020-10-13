@@ -10,11 +10,11 @@
              Loaded="OnLoad"
              >
     <UserControl.Resources>
-        <Image x:Key="DragImage" Source="C:\Users\wwwmi\github\Common\Barnaul\Images\move.png"/>
-        <Image x:Key="PenImage" Source="C:\Users\wwwmi\github\Common\Barnaul\Images\pen.png"/>
-        <Image x:Key="LineImage" Source="C:\Users\wwwmi\github\Common\Barnaul\Images\line.png"/>
-        <Image x:Key="RectImage" Source="C:\Users\wwwmi\github\Common\Barnaul\Images\rect.png"/>
-        <Image x:Key="CircleImage" Source="C:\Users\wwwmi\github\Common\Barnaul\Images\circle.png"/>
+        <Image x:Key="DragImage" Source="..\Images\move.png"/>
+        <Image x:Key="PenImage" Source="..\Images\pen.png"/>
+        <Image x:Key="LineImage" Source="..\Images\line.png"/>
+        <Image x:Key="RectImage" Source="..\Images\rect.png"/>
+        <Image x:Key="CircleImage" Source="..\Images\circle.png"/>
     </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -58,7 +58,7 @@
             <StackPanel Orientation="Horizontal">
                 <ToggleButton x:Name="DragButton" Content="{StaticResource DragImage}"
                               Height="22" Width="22" 
-                              Click="DragClick" IsChecked="True"/>
+                              Click="DragClick" IsChecked="True" Checked="DragButton_Checked"/>
                 <ToggleButton x:Name="PenButton" Content="{StaticResource PenImage}"
                               Height="22" Width="22"
                               Click="PenClick" IsChecked="False"/>

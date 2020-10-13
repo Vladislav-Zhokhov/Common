@@ -12,6 +12,7 @@ namespace Barnaul.Windows
     public partial class MapUserControl : UserControl
     {
         bool isDragging = false;
+        bool isDrawing = false;
         const double gridSpace = 100.0;
         DrawingMode drawingMode = DrawingMode.DragAndZoom;
         Point startPoint;
@@ -125,16 +126,27 @@ namespace Barnaul.Windows
             
         }
 
+        private void DragButton_Checked(object sender, System.Windows.RoutedEventArgs e)
+        {
+
+        }
+
         private void zoomAndPanControl_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (drawingMode == DrawingMode.DragAndZoom)
                 isDragging = true;
+            else
+            {
+                if (drawingMode != DrawingMode.None)
+                    isDrawing = true;
+            }
             startPoint = e.GetPosition(zap.Content as Canvas);
         }
 
         private void zoomAndPanControl_MouseUp(object sender, MouseButtonEventArgs e)
         {
             isDragging = false;
+            isDrawing = false;
         }
 
         private void zoomAndPanControl_MouseMove(object sender, MouseEventArgs e)
@@ -145,6 +157,51 @@ namespace Barnaul.Windows
                 Vector dragOffset = endPoint - startPoint;
                 zap.ContentOffsetX -= dragOffset.X;
                 zap.ContentOffsetY -= dragOffset.Y;
+            }
+            else
+            {
+                switch (drawingMode)
+                {
+                    case DrawingMode.Pen:
+                        
+                        break;
+                    case DrawingMode.Line:
+                        /*var line = new System.Windows.Shapes.Line()
+                        {
+                            X1 = startPoint.X,
+                            X2 = startPoint.X,
+                            Y1 = startPoint.Y,
+                            Y2 = startPoint.Y,
+                            Stroke = Brushes.White,
+                            StrokeThickness = 1
+                        };
+                        drawingLayer.Children.Add(line);
+                        
+
+                        Point current_point = e.GetPosition(zap.Content as Canvas);
+                        drawingLayer.Children.Remove(line);
+                        line = new System.Windows.Shapes.Line()
+                        {
+                            X1 = startPoint.X,
+                            X2 = current_point.X,
+                            Y1 = startPoint.Y,
+                            Y2 = current_point.Y,
+                            Stroke = Brushes.White,
+                            StrokeThickness = 1
+                        };
+                        drawingLayer.Children.Add(line);
+                        */
+                        
+                        break;
+                    case DrawingMode.Rectangle:
+                        break;
+                    case DrawingMode.Ellipse:
+                        break;
+                    case DrawingMode.DragAndZoom:
+                        break;
+                    case DrawingMode.None:
+                        break;
+                }
             }
         }
 
