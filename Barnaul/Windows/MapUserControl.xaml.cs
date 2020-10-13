@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -13,9 +14,16 @@ namespace Barnaul.Windows
     {
         bool isDragging = false;
         bool isDrawing = false;
+        bool initDrawing = false;
         const double gridSpace = 100.0;
+
+        List<System.Windows.Shapes.Line> drewLines = new List<System.Windows.Shapes.Line>();
+        List<System.Windows.Shapes.Rectangle> drewRectangles = new List<System.Windows.Shapes.Rectangle>();
+        List<System.Windows.Shapes.Ellipse> drewEllipses = new List<System.Windows.Shapes.Ellipse>();
+
         DrawingMode drawingMode = DrawingMode.DragAndZoom;
         Point startPoint;
+        Point currentPoint;
 
         Canvas gridLayer;
         Canvas drawingLayer;
@@ -138,7 +146,11 @@ namespace Barnaul.Windows
             else
             {
                 if (drawingMode != DrawingMode.None)
+                {
                     isDrawing = true;
+                    initDrawing = true;
+                }
+                
             }
             startPoint = e.GetPosition(zap.Content as Canvas);
         }
@@ -160,47 +172,98 @@ namespace Barnaul.Windows
             }
             else
             {
-                switch (drawingMode)
+                if (isDrawing)
                 {
-                    case DrawingMode.Pen:
-                        
-                        break;
-                    case DrawingMode.Line:
-                        /*var line = new System.Windows.Shapes.Line()
-                        {
-                            X1 = startPoint.X,
-                            X2 = startPoint.X,
-                            Y1 = startPoint.Y,
-                            Y2 = startPoint.Y,
-                            Stroke = Brushes.White,
-                            StrokeThickness = 1
-                        };
-                        drawingLayer.Children.Add(line);
-                        
+                    switch (drawingMode)
+                    {
+                        case DrawingMode.Pen:
+                            break;
 
-                        Point current_point = e.GetPosition(zap.Content as Canvas);
-                        drawingLayer.Children.Remove(line);
-                        line = new System.Windows.Shapes.Line()
-                        {
-                            X1 = startPoint.X,
-                            X2 = current_point.X,
-                            Y1 = startPoint.Y,
-                            Y2 = current_point.Y,
-                            Stroke = Brushes.White,
-                            StrokeThickness = 1
-                        };
-                        drawingLayer.Children.Add(line);
-                        */
+                        case DrawingMode.Line:
+                            if (initDrawing)
+                            {
+                                drewLines.Add(new System.Windows.Shapes.Line()
+                                {
+                                    X1 = startPoint.X,
+                                    X2 = startPoint.X,
+                                    Y1 = startPoint.Y,
+                                    Y2 = startPoint.Y,
+                                    Stroke = Brushes.MediumSpringGreen,
+                                    StrokeThickness = 2
+                                });
+                                drawingLayer.Children.Add(drewLines[drewLines.Count - 1]);
+                                initDrawing = false;
+                            }
+                            else
+                            {
+                                currentPoint = e.GetPosition(zap.Content as Canvas);
+                                drewLines[drewLines.Count - 1].X2 = currentPoint.X;
+                                drewLines[drewLines.Count - 1].Y2 = currentPoint.Y;
+                            }
+                            break;
+
+                        case DrawingMode.Rectangle:
+                            if (initDrawing)
+                            {
+                                drewRectangles.Add(new System.Windows.Shapes.Rectangle()
+                                {
+                                    Width = 0,
+                                    Height = 0,
+                                    Stroke = Brushes.MediumSpringGreen,
+                                    StrokeThickness = 2
+                                });
+                                drawingLayer.Children.Add(drewRectangles[drewRectangles.Count - 1]);
+                                Canvas.SetLeft(drewRectangles[drewRectangles.Count - 1], startPoint.X);
+                                Canvas.SetTop(drewRectangles[drewRectangles.Count - 1], startPoint.Y);
+                                initDrawing = false;
+                            }
+                            else
+                            {
+                                currentPoint = e.GetPosition(zap.Content as Canvas);
+                                if (currentPoint.X < startPoint.X)
+                                {
+                                    Canvas.SetLeft(drewRectangles[drewRectangles.Count - 1], currentPoint.X);
+                                }
+                                if (currentPoint.Y < startPoint.Y)
+                                {
+                                    Canvas.SetTop(drewRectangles[drewRectangles.Count - 1], currentPoint.Y);
+                                }
+                                drewRectangles[drewRectangles.Count - 1].Width = Math.Abs(startPoint.X - currentPoint.X);
+                                drewRectangles[drewRectangles.Count - 1].Height = Math.Abs(startPoint.Y - currentPoint.Y);
+                            }
+                            break;
                         
-                        break;
-                    case DrawingMode.Rectangle:
-                        break;
-                    case DrawingMode.Ellipse:
-                        break;
-                    case DrawingMode.DragAndZoom:
-                        break;
-                    case DrawingMode.None:
-                        break;
+                        case DrawingMode.Ellipse:
+                            if (initDrawing)
+                            {
+                                drewEllipses.Add(new System.Windows.Shapes.Ellipse()
+                                {
+                                    Width = 0,
+                                    Height = 0,
+                                    Stroke = Brushes.MediumSpringGreen,
+                                    StrokeThickness = 2
+                                });
+                                drawingLayer.Children.Add(drewEllipses[drewEllipses.Count - 1]);
+                                Canvas.SetLeft(drewEllipses[drewEllipses.Count - 1], startPoint.X);
+                                Canvas.SetTop(drewEllipses[drewEllipses.Count - 1], startPoint.Y);
+                                initDrawing = false;
+                            }
+                            else
+                            {
+                                currentPoint = e.GetPosition(zap.Content as Canvas);
+                                if (currentPoint.X < startPoint.X)
+                                {
+                                    Canvas.SetLeft(drewEllipses[drewEllipses.Count - 1], currentPoint.X);
+                                }
+                                if (currentPoint.Y < startPoint.Y)
+                                {
+                                    Canvas.SetTop(drewEllipses[drewEllipses.Count - 1], currentPoint.Y);
+                                }
+                                drewEllipses[drewEllipses.Count - 1].Width = Math.Abs(startPoint.X - currentPoint.X);
+                                drewEllipses[drewEllipses.Count - 1].Height = Math.Abs(startPoint.Y - currentPoint.Y);
+                            }
+                            break;
+                    }
                 }
             }
         }
