@@ -56,18 +56,18 @@
                 <MenuItem Header="Код абонента для ручного ввода" InputGestureText="Сtrl+33" />
             </MenuItem>
             <MenuItem Header="ОбобщениеВО">
-                <MenuItem Header="Параметры трассы" InputGestureText="Сtrl+41" />
-                <MenuItem Header="Параметры отождествления" InputGestureText="Сtrl+42" />
-                <MenuItem Header="Параметры выборочного оповещения" InputGestureText="Сtrl+43" />
+                <MenuItem Header="Параметры трассы" InputGestureText="Сtrl+41" Click="MenuItem_ClickParTrassy" />
+                <MenuItem Header="Параметры отождествления" InputGestureText="Сtrl+42" Click="MenuItem_ClickParOtozhestvlen"/>
+                <MenuItem Header="Параметры выборочного оповещения" InputGestureText="Сtrl+43" Click="MenuItem_ClickParVyborochnogoOp" />
                 <MenuItem Header="Укрупнение">
-                    <MenuItem Header="Ввод стробов" />
-                    <MenuItem Header="Разукрупнение" />
-                    <MenuItem Header="Открупненить" />
-                    <MenuItem Header="Приукрупнить" />
-                    <MenuItem Header="Пуск" />
-                    <MenuItem Header="Сброс" />
-                    <MenuItem Header="Параметры группы" />
-                    <MenuItem Header="Способ укрупнения" />
+                    <MenuItem Header="Ввод стробов" Click="MenuItem_ClickVvodStrobov"/>
+                    <MenuItem Header="Разукрупнение" Click="MenuItem_ClickRazukrupnenie"/>
+                    <MenuItem Header="Открупненить" Click="MenuItem_ClickOtkrupnit"/>
+                    <MenuItem Header="Приукрупнить" Click="MenuItem_ClickPrikrupnit"/>
+                    <MenuItem Header="Пуск" ToolTip="Для разрешения укрупнения трасс необходимо выбрать пункт меню «Пуск»." />
+                    <MenuItem Header="Сброс" ToolTip="Запрет укрупнения трасс производится выбором пункта меню «Сброс»." />
+                    <MenuItem Header="Параметры группы" Click="MenuItem_ClickParGruppy"/>
+                    <MenuItem Header="Способ укрупнения" Click="MenuItem_ClickSposobUkr"/>
                 </MenuItem>
             </MenuItem>
             <MenuItem Header="Управление">

@@ -45,7 +45,7 @@ namespace Barnaul.Windows
             System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
             Application.Current.Shutdown();
         }
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e) 
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
             new CommandTable().ShowDialog();
         }
@@ -124,7 +124,6 @@ namespace Barnaul.Windows
         private void MenuItem_Click_8(object sender, RoutedEventArgs e)
         {
             new EntSecResp().ShowDialog();
-
         }
 
         private void MenuItem_Click_9(object sender, RoutedEventArgs e)
@@ -155,6 +154,42 @@ namespace Barnaul.Windows
         private void MenuItem_Click_14(object sender, RoutedEventArgs e)
         {
             new GeodezGaus().ShowDialog();
+        }
+        private void MenuItem_ClickParTrassy(object sender, RoutedEventArgs e)
+        {
+            new NumberOfTrassa().ShowDialog();
+        }
+        private void MenuItem_ClickParOtozhestvlen(object sender, RoutedEventArgs e)
+        {
+            new ParametryOtozhestvleniya().ShowDialog();
+        }
+        private void MenuItem_ClickParVyborochnogoOp(object sender, RoutedEventArgs e)
+        {
+            new ParametryVyborochnogoOponesheniya().ShowDialog();
+        }
+        private void MenuItem_ClickVvodStrobov(object sender, RoutedEventArgs e)
+        {
+            new UkrupnenieStroby().ShowDialog();
+        }
+        private void MenuItem_ClickRazukrupnenie(object sender, RoutedEventArgs e)
+        {
+            new UkrupnenieGruppa().ShowDialog();
+        }
+        private void MenuItem_ClickOtkrupnit(object sender, RoutedEventArgs e)
+        {
+            new UkrupnenieOtkrupnit().ShowDialog();
+        }
+        private void MenuItem_ClickPrikrupnit(object sender, RoutedEventArgs e)
+        {
+            new UkrupneniePrikrupnit().ShowDialog();
+        }
+        private void MenuItem_ClickSposobUkr(object sender, RoutedEventArgs e)
+        {
+            new UkrupnenieSposob().ShowDialog();
+        }
+        private void MenuItem_ClickParGruppy(object sender, RoutedEventArgs e)
+        {
+            new UkrupnenieParGruppy().ShowDialog();
         }
     }
 }
