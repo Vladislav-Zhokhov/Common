@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OpenPaint.Properties
+namespace Barnaul.Properties
 {
 
 

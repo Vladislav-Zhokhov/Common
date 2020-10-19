@@ -33,7 +33,7 @@
             </StackPanel.Resources>
             <Button Content="106x90"/>
             <Button Content="Сел"/>
-            <ComboBox SelectedIndex="0" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBox SelectedIndex="0">
                 <ComboBoxItem Content="полный"/>
             </ComboBox>
             <ComboBox
@@ -50,7 +50,7 @@
             <Button Content="РучнВ"/>
             <Button Content="Расст-е"/>
             <StackPanel Orientation="Horizontal">
-                <ToggleButton x:Name="BR" Content=" БР " Checked="ToggleButton_Checked" IsChecked="False"/>
+                <ToggleButton x:Name="BR" Content=" БР " IsChecked="False"/>
                 <ToggleButton Content=" ДР " IsChecked="False"/>
                 <ToggleButton Content=" ТР " IsChecked="True"/>
             </StackPanel>
@@ -72,6 +72,19 @@
                               Height="22" Width="22"
                               Click="CircleClick" IsChecked="False"/>
             </StackPanel>
+            <ComboBox
+                Name="ColorPicker"
+                SelectedIndex="0"
+                MinWidth="80"
+                VerticalAlignment="Bottom"
+                SelectionChanged="ColorPicked"
+                >
+                <ComboBoxItem Content="Белый"/>
+                <ComboBoxItem Content="Красный"/>
+                <ComboBoxItem Content="Зелёный"/>
+                <ComboBoxItem Content="Синий"/>
+                <ComboBoxItem Content="Жёлтый"/>
+            </ComboBox>
         </StackPanel>
         <Grid Grid.Row="1" Background="Black" Margin="1" MouseRightButtonDown="button1_Click" >
             <Image x:Name="pictureBox1" Height="100" Width="100" Source="Profile_picture_of_TehPlaneFreak.png" Margin="-900,0,0,0" RenderTransformOrigin="0.5,0.5">
@@ -95,8 +108,8 @@
                     >
                     <Canvas
                         x:Name="mainCanvas"
-                        Width="10000"
-                        Height="10000"
+                        Width="1500"
+                        Height="1500"
                         Background="Black"
                         >
                     </Canvas>
