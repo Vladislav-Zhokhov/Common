@@ -19,14 +19,14 @@
             <StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <StackPanel Margin="5,0,0,0" >
-                        <CheckBox Content="ВключитьКБД" Margin="0,5,0,0"></CheckBox>
-                        <CheckBox Content="ВключитьЦЦР" Margin="0,5,0,0"></CheckBox>
-                        <CheckBox Content="ВключитьРСО" Margin="0,5,0,0"></CheckBox>
+                        <CheckBox ToolTip="Для включения автоматической выработки рекомендаций по координации боевых действий (КБД) необходимо установить признак «Включить КБД»." Content="ВключитьКБД" Margin="0,5,0,0"></CheckBox>
+                        <CheckBox ToolTip="Для включения в работу программы автоматического целераспределения (ЦЦР) необходимо установить признак «Включить ЦЦР»." Content="ВключитьЦЦР" Margin="0,5,0,0"></CheckBox>
+                        <CheckBox ToolTip="Для включения в работу программы автоматического распределения секторов ответственности (РСО) необходимо установить признак «Включить РСО»." Content="ВключитьРСО" Margin="0,5,0,0"></CheckBox>
                     </StackPanel>
                     <StackPanel Margin="5,0,0,0">
-                        <CheckBox Content="ВыдатьКБД" Margin="0,5,0,0"></CheckBox>
-                        <CheckBox Content="ВыдатьЦЦР" Margin="0,5,0,0"></CheckBox>
-                        <CheckBox Content="ВыдатьРСО" Margin="0,5,0,0"></CheckBox>
+                        <CheckBox ToolTip="Для выдачи подчиненным информации о включении режима КБД необходимо установить признак «Выдать КБД»." Content="ВыдатьКБД" Margin="0,5,0,0"></CheckBox>
+                        <CheckBox ToolTip="Для выдачи подчиненным информации о включении режима ЦЦР необходимо установить признак «Выдать ЦЦР»." Content="ВыдатьЦЦР" Margin="0,5,0,0"></CheckBox>
+                        <CheckBox ToolTip="Для выдачи подчиненным информации о включении режима РСО необходимо установить признак «Выдать РСО»." Content="ВыдатьРСО" Margin="0,5,0,0"></CheckBox>
                     </StackPanel>
                     <StackPanel Margin="10,0,0,0">
                         <CheckBox Content="АвтКЭС" Margin="0,5,0,0"></CheckBox>
@@ -37,7 +37,11 @@
                     <StackPanel Margin="10,0,0,0">
                         <GroupBox >
                             <GroupBox.Header>
-                                <TextBlock Text="Задержка Рекомендации" TextWrapping="Wrap" Width="90" TextAlignment="Center"></TextBlock>
+                                <TextBlock Text="Задержка Рекомендации" TextWrapping="Wrap" Width="90" TextAlignment="Center">
+                                    <TextBlock.ToolTip>
+                                        <TextBlock TextWrapping="Wrap" Text="Для установки времени ожидания реакции оператора на сформированную рекомендацию необходимо в поле «Задержка рекомендации» ввести промежуток времени (в секундах) и нажать кнопку «Ввод»." Width="300"></TextBlock>
+                                    </TextBlock.ToolTip>
+                                </TextBlock>
                             </GroupBox.Header>
                             <StackPanel Orientation="Horizontal">
                                 <TextBox Text="0.0" Width="60" TextAlignment="Center"></TextBox>
