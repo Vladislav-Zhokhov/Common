@@ -19,9 +19,9 @@
             <StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <StackPanel Margin="5,0,0,0" >
-                        <CheckBox ToolTip="Для включения автоматической выработки рекомендаций по координации боевых действий (КБД) необходимо установить признак «Включить КБД»." Content="ВключитьКБД" Margin="0,5,0,0"></CheckBox>
-                        <CheckBox ToolTip="Для включения в работу программы автоматического целераспределения (ЦЦР) необходимо установить признак «Включить ЦЦР»." Content="ВключитьЦЦР" Margin="0,5,0,0"></CheckBox>
-                        <CheckBox ToolTip="Для включения в работу программы автоматического распределения секторов ответственности (РСО) необходимо установить признак «Включить РСО»." Content="ВключитьРСО" Margin="0,5,0,0"></CheckBox>
+                        <CheckBox Content="ВключитьКБД" Margin="0,5,0,0"></CheckBox>
+                        <CheckBox Content="ВключитьЦЦР" Margin="0,5,0,0"></CheckBox>
+                        <CheckBox Content="ВключитьРСО" Margin="0,5,0,0"></CheckBox>
                     </StackPanel>
                     <StackPanel Margin="5,0,0,0">
                         <CheckBox ToolTip="Для выдачи подчиненным информации о включении режима КБД необходимо установить признак «Выдать КБД»." Content="ВыдатьКБД" Margin="0,5,0,0"></CheckBox>
