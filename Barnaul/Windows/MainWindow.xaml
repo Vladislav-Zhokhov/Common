@@ -25,14 +25,14 @@
                 </Style>
             </Menu.Resources>
             <MenuItem Header="Подготовка">
-                <MenuItem Header="Конфигурация сети РЛИ" InputGestureText="Сtrl+11" />
-                <MenuItem Header="Ввод реперов" InputGestureText="Сtrl+12" />
-                <MenuItem Header="Ввод местоположения" InputGestureText="Сtrl+13" />
+                <MenuItem Header="Конфигурация сети РЛИ" InputGestureText="Сtrl+11" Click="MenuItem_Click_4" />
+                <MenuItem Header="Ввод реперов" InputGestureText="Сtrl+12" Click="MenuItem_Click_5" />
+                <MenuItem Header="Ввод местоположения" InputGestureText="Сtrl+13" Click="MenuItem_Click_6" />
                 <MenuItem Header="Регламент М-498РЛИ" InputGestureText="Сtrl+14" />
-                <MenuItem Header="TTX подчиненного" InputGestureText="Сtrl+15" />
-                <MenuItem Header="Дата/Время" InputGestureText="Сtrl+16" />
+                <MenuItem Header="TTX подчиненного" InputGestureText="Сtrl+15" Click="MenuItem_Click_12" />
+                <MenuItem Header="Дата/Время" InputGestureText="Сtrl+16" Click="MenuItem_Click_13" />
                 <MenuItem Header="Пересчёт координат">
-                    <MenuItem Header="Геодезические в Гаусса-Крюгера" InputGestureText="Сtrl+17" />
+                    <MenuItem Header="Геодезические в Гаусса-Крюгера" InputGestureText="Сtrl+17" Click="MenuItem_Click_14" />
                     <MenuItem Header="Гаусса-Крюгера в геодезические" InputGestureText="Сtrl+18" />
                     <MenuItem Header="Геодезические Гаусса-Крюгера" InputGestureText="Сtrl+19" />
                 </MenuItem>
@@ -56,27 +56,27 @@
                 <MenuItem Header="Код абонента для ручного ввода" InputGestureText="Сtrl+33" />
             </MenuItem>
             <MenuItem Header="ОбобщениеВО">
-                <MenuItem Header="Параметры трассы" InputGestureText="Сtrl+41" />
-                <MenuItem Header="Параметры отождествления" InputGestureText="Сtrl+42" />
-                <MenuItem Header="Параметры выборочного оповещения" InputGestureText="Сtrl+43" />
+                <MenuItem Header="Параметры трассы" InputGestureText="Сtrl+41" Click="MenuItem_ClickParTrassy" />
+                <MenuItem Header="Параметры отождествления" InputGestureText="Сtrl+42" Click="MenuItem_ClickParOtozhestvlen"/>
+                <MenuItem Header="Параметры выборочного оповещения" InputGestureText="Сtrl+43" Click="MenuItem_ClickParVyborochnogoOp" />
                 <MenuItem Header="Укрупнение">
-                    <MenuItem Header="Ввод стробов" />
-                    <MenuItem Header="Разукрупнение" />
-                    <MenuItem Header="Открупненить" />
-                    <MenuItem Header="Приукрупнить" />
-                    <MenuItem Header="Пуск" />
-                    <MenuItem Header="Сброс" />
-                    <MenuItem Header="Параметры группы" />
-                    <MenuItem Header="Способ укрупнения" />
+                    <MenuItem Header="Ввод стробов" Click="MenuItem_ClickVvodStrobov"/>
+                    <MenuItem Header="Разукрупнение" Click="MenuItem_ClickRazukrupnenie"/>
+                    <MenuItem Header="Открупненить" Click="MenuItem_ClickOtkrupnit"/>
+                    <MenuItem Header="Приукрупнить" Click="MenuItem_ClickPrikrupnit"/>
+                    <MenuItem Header="Пуск" ToolTip="Для разрешения укрупнения трасс необходимо выбрать пункт меню «Пуск»." />
+                    <MenuItem Header="Сброс" ToolTip="Запрет укрупнения трасс производится выбором пункта меню «Сброс»." />
+                    <MenuItem Header="Параметры группы" Click="MenuItem_ClickParGruppy"/>
+                    <MenuItem Header="Способ укрупнения" Click="MenuItem_ClickSposobUkr"/>
                 </MenuItem>
             </MenuItem>
             <MenuItem Header="Управление">
-                <MenuItem Header="Установить режимы" InputGestureText="Сtrl+51" />
-                <MenuItem Header="Ввод сектора ответственности" InputGestureText="Сtrl+52" />
-                <MenuItem Header="Ввод зоны ответственности" InputGestureText="Сtrl+53" />
-                <MenuItem Header="Выдать ДКРУ" InputGestureText="Сtrl+54" />
+                <MenuItem Header="Установить режимы" InputGestureText="Сtrl+51" Click="MenuItem_Click_7" />
+                <MenuItem Header="Ввод сектора ответственности" InputGestureText="Сtrl+52" Click="MenuItem_Click_8" />
+                <MenuItem Header="Ввод зоны ответственности" InputGestureText="Сtrl+53" Click="MenuItem_Click_9" />
+                <MenuItem Header="Выдать ДКРУ" InputGestureText="Сtrl+54" Click="MenuItem_Click_10" />
                 <MenuItem Header="Выдать реперную точку" InputGestureText="Сtrl+55" />
-                <MenuItem Header="Выдать точку стояния на ВКП" InputGestureText="Сtrl+56" />
+                <MenuItem Header="Выдать точку стояния на ВКП" InputGestureText="Сtrl+56" Click="MenuItem_Click_11" />
             </MenuItem>
             <MenuItem Header="Регистрация">
                 <MenuItem Header="Создание" InputGestureText="Сtrl+62" />
@@ -98,12 +98,12 @@
             </MenuItem>
             <MenuItem Header="ФК" >
                 <MenuItem Header="Контрольная сумма" InputGestureText="Ctrl+81" />
-                <MenuItem Header="Навигация" InputGestureText="Ctrl+82" />
-                <MenuItem Header="Н911" InputGestureText="Ctrl+83" />
-                <MenuItem Header="М-498РЛИ" InputGestureText="Ctrl+84" />
-                <MenuItem Header="АВСК-У" InputGestureText="Ctrl+85" />
-                <MenuItem Header="РСТ" InputGestureText="Ctrl+86" />
-                <MenuItem Header="Р910М" InputGestureText="Ctrl+89" />
+                <MenuItem Header="Навигация" InputGestureText="Ctrl+82" Click="MenuItem_ClickNavigate"/>
+                <MenuItem Header="Н911" InputGestureText="Ctrl+83" Click="MenuItem_ClickH911"/>
+                <MenuItem Header="М-498РЛИ" InputGestureText="Ctrl+84" Click="MenuItem_ClickM_498"/>
+                <MenuItem Header="АВСК-У" InputGestureText="Ctrl+85" Click="MenuItem_ClickContolABCK"/>
+                <MenuItem Header="РСТ" InputGestureText="Ctrl+86" Click="MenuItem_ClickControlRST"/>
+                <MenuItem Header="Р910М" InputGestureText="Ctrl+89" Click="MenuItem_ClickControlR910M" />
 
             </MenuItem>
             <MenuItem Header="Выход">
@@ -125,7 +125,6 @@
                     <MenuItem Name="Mest" Header="Прямоугольные(местные)" IsCheckable="True" Click="Mest_Click" />
                 </MenuItem>
                 <MenuItem Header="След трассы..." Click="MenuItem_Click_2" />
-
             </MenuItem>
 
             <MenuItem Header="Парметры">

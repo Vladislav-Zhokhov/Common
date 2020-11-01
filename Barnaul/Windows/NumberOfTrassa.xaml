@@ -1,0 +1,24 @@
+﻿<Window x:Class="Barnaul.Windows.NumberOfTrassa"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Barnaul.Windows"
+        mc:Ignorable="d"
+        Title="Номер трассы" Height="124.333" Width="234.5">
+    <Grid Margin="0,0,0,-90.001" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="58"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="68*"/>
+        </Grid.RowDefinitions>
+        <GroupBox  HorizontalAlignment="Left" Height="46.5" Margin="10,10,0,0" VerticalAlignment="Top" Width="196">
+            <Grid HorizontalAlignment="Left" Height="37.167" Margin="-6,0,-2,0" VerticalAlignment="Top" Width="192">
+                <TextBlock HorizontalAlignment="Left" Height="20" Margin="10,10,0,0" TextWrapping="Wrap" Text="Номер трассы" VerticalAlignment="Top" Width="80.334"/>
+                <TextBox ToolTip="В высветившемся диалоговом окне набрать номер трассы и нажать кнопку «Ввод». Появится диалоговое окно «Параметры трассы», в котором необходимо нажать кнопку «Запрос». В полях диалогового окна появятся параметры указанной трассы" HorizontalAlignment="Left" Height="20" Margin="130.334,9,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="58"/>
+            </Grid>
+        </GroupBox>
+        <Button ToolTip="В высветившемся диалоговом окне набрать номер трассы и нажать кнопку «Ввод». Появится диалоговое окно «Параметры трассы», в котором необходимо нажать кнопку «Запрос». В полях диалогового окна появятся параметры указанной трассы." Content="Ввод" HorizontalAlignment="Left" Margin="10,0.891,0,0" Width="76.667" Click="Parametry_Click" Grid.Row="1" Height="20"/>
+        <Button Content="Отказ" HorizontalAlignment="Left" Margin="129.166,0.891,0,0" Width="76.667" Click="Close_Click" Grid.Row="1" RenderTransformOrigin="0.515,0.722" Height="20"/>
+    </Grid>
+</Window>

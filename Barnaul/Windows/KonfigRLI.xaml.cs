@@ -26,6 +26,13 @@ namespace Barnaul.Windows
             level.Text = levelCom.Text;
             tipText.Text = tip.Content.ToString();
         }
+        public KonfigRLI(int a)
+        {
+            InitializeComponent();
+            level.Text = levelCom.Text;
+            tipText.Text = tip.Content.ToString();
+            tabControl.SelectedIndex = 1;
+        }
 
         private void ComboBox_DropDownClosed(object sender, EventArgs e)
         {

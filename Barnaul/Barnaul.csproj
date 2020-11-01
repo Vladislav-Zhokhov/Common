@@ -84,11 +84,40 @@
     <Compile Include="Windows\CommandTable.xaml.cs">
       <DependentUpon>CommandTable.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\ControlMods.xaml.cs">
+      <DependentUpon>ControlMods.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ControlR910M.xaml.cs">
+      <DependentUpon>ControlR910M.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ControlRST.xaml.cs">
+      <DependentUpon>ControlRST.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ControlABCK.xaml.cs">
+      <DependentUpon>ControlABCK.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\DannyePoTipuZrkWindow.xaml.cs">
       <DependentUpon>DannyePoTipuZrkWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\BlankZapretaAZSoprovozhdenie.xaml.cs">
       <DependentUpon>BlankZapretaAZSoprovozhdenie.xaml</DependentUpon>
+    <Compile Include="Windows\DannyeSN.xaml.cs">
+      <DependentUpon>DannyeSN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\DateTime.xaml.cs">
+      <DependentUpon>DateTime.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\DKRU.xaml.cs">
+      <DependentUpon>DKRU.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EntAreaResp.xaml.cs">
+      <DependentUpon>EntAreaResp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EntSecResp.xaml.cs">
+      <DependentUpon>EntSecResp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\GeodezGaus.xaml.cs">
+      <DependentUpon>GeodezGaus.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\GoalCharacteristics.xaml.cs">
       <DependentUpon>GoalCharacteristics.xaml</DependentUpon>
@@ -98,6 +127,24 @@
     </Compile>
     <Compile Include="Windows\lineControl.xaml.cs">
       <DependentUpon>lineControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\M_498.xaml.cs">
+      <DependentUpon>M_498.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Navigate.xaml.cs">
+      <DependentUpon>Navigate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\NumberOfTrassa.xaml.cs">
+      <DependentUpon>NumberOfTrassa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ParametryOtozhestvleniya.xaml.cs">
+      <DependentUpon>ParametryOtozhestvleniya.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ParametryTrassy.xaml.cs">
+      <DependentUpon>ParametryTrassy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ParametryVyborochnogoOponesheniya.xaml.cs">
+      <DependentUpon>ParametryVyborochnogoOponesheniya.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Select.xaml.cs">
       <DependentUpon>Select.xaml</DependentUpon>
@@ -111,8 +158,38 @@
     <Compile Include="Windows\SpeedUpdate.xaml.cs">
       <DependentUpon>SpeedUpdate.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\StandingPointIssue.xaml.cs">
+      <DependentUpon>StandingPointIssue.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Trace.xaml.cs">
       <DependentUpon>Trace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\TTXSubordinate.xaml.cs">
+      <DependentUpon>TTXSubordinate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UkrupnenieGruppa.xaml.cs">
+      <DependentUpon>UkrupnenieGruppa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UkrupnenieOtkrupnit.xaml.cs">
+      <DependentUpon>UkrupnenieOtkrupnit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UkrupnenieParGruppy.xaml.cs">
+      <DependentUpon>UkrupnenieParGruppy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UkrupnenieParGruppy_2.xaml.cs">
+      <DependentUpon>UkrupnenieParGruppy_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UkrupneniePrikrupnit.xaml.cs">
+      <DependentUpon>UkrupneniePrikrupnit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UkrupnenieSposob.xaml.cs">
+      <DependentUpon>UkrupnenieSposob.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UkrupnenieStroby.xaml.cs">
+      <DependentUpon>UkrupnenieStroby.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UkrupnenieVyvesti.xaml.cs">
+      <DependentUpon>UkrupnenieVyvesti.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\VvodComandi2ZWindow.xaml.cs">
       <DependentUpon>VvodComandi2ZWindow.xaml</DependentUpon>
@@ -129,6 +206,9 @@
     <Compile Include="Windows\ZapretPeredachiWindow.xaml.cs">
       <DependentUpon>ZapretPeredachiWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\H911.xaml.cs">
+      <DependentUpon>H911.xaml</DependentUpon>
+    </Compile>
     <Page Include="Windows\AbonentTrassaWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -138,6 +218,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\CommandTable.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\ControlMods.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ControlR910M.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ControlRST.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ControlABCK.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -150,14 +246,63 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\GoalCharacteristics.xaml">
+    <Page Include="Windows\DannyeSN.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\DateTime.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\DKRU.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\EntAreaResp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\EntSecResp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\GeodezGaus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\GoalCharacteristics.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\KonfigRLI.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\lineControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\M_498.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Navigate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\NumberOfTrassa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ParametryOtozhestvleniya.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ParametryTrassy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ParametryVyborochnogoOponesheniya.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -186,10 +331,50 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\SpeedUpdate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\StandingPointIssue.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\Trace.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\TTXSubordinate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UkrupnenieGruppa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UkrupnenieOtkrupnit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UkrupnenieParGruppy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UkrupnenieParGruppy_2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UkrupneniePrikrupnit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UkrupnenieSposob.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UkrupnenieStroby.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UkrupnenieVyvesti.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -210,6 +395,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\ZapretPeredachiWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\H911.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

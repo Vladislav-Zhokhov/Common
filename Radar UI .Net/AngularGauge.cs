@@ -32,7 +32,6 @@ using System.Linq;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Effects;
 using LiveCharts.Helpers;
-using LiveCharts.Wpf.Points;
 
 namespace LiveCharts.Wpf
 {

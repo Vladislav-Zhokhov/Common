@@ -2,6 +2,7 @@
 
 namespace Barnaul.Windows
 {
+    using Microsoft.Xaml.Behaviors.Core;
     using ViewModels;
 
     public partial class MainWindow : Window
@@ -49,7 +50,6 @@ namespace Barnaul.Windows
             System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
             Application.Current.Shutdown();
         }
-
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
             new CommandTable().ShowDialog();
@@ -64,7 +64,6 @@ namespace Barnaul.Windows
         {
             Gk.IsChecked = false;
         }
-
         private void MenuItem_Click_2(object sender, RoutedEventArgs e)
         {
             new Trace().ShowDialog();
@@ -74,15 +73,128 @@ namespace Barnaul.Windows
         {
             Ts.IsChecked = false;
         }
-
         private void Ts_Click(object sender, RoutedEventArgs e)
         {
             Reper.IsChecked = false;
         }
-
         private void MenuItem_Click_3(object sender, RoutedEventArgs e)
         {
             new SpeedUpdate().ShowDialog();
+        }
+        private void MenuItem_ClickNavigate(object sender, RoutedEventArgs e)
+        {
+            new Navigate().ShowDialog();
+        }
+        private void MenuItem_ClickH911(object sender, RoutedEventArgs e)
+        {
+            new H911().ShowDialog();
+        }
+        private void MenuItem_ClickM_498(object sender, RoutedEventArgs e)
+        {
+            new M_498().ShowDialog();
+        }
+        private void MenuItem_ClickContolABCK(object sender, RoutedEventArgs e)
+        {
+            new ControlABCK().ShowDialog();
+        }
+        private void MenuItem_ClickControlRST(object sender, RoutedEventArgs e)
+        {
+            new ControlRST().ShowDialog();
+        }
+        private void MenuItem_ClickControlR910M(object sender, RoutedEventArgs e)
+        {
+            new ControlR910M().ShowDialog();
+        }
+
+        private void MenuItem_Click_4(object sender, RoutedEventArgs e)
+        {
+            new KonfigRLI().ShowDialog();
+        }
+
+        private void MenuItem_Click_5(object sender, RoutedEventArgs e)
+        {
+            new KonfigRLI().ShowDialog();
+        }
+
+        private void MenuItem_Click_6(object sender, RoutedEventArgs e)
+        {
+            new KonfigRLI(2).ShowDialog();
+        }
+
+        private void MenuItem_Click_7(object sender, RoutedEventArgs e)
+        {
+            new ControlMods().ShowDialog();
+        }
+
+        private void MenuItem_Click_8(object sender, RoutedEventArgs e)
+        {
+            new EntSecResp().ShowDialog();
+        }
+
+        private void MenuItem_Click_9(object sender, RoutedEventArgs e)
+        {
+            new EntAreaResp().ShowDialog();
+        }
+
+        private void MenuItem_Click_10(object sender, RoutedEventArgs e)
+        {
+            new DKRU().ShowDialog();
+        }
+
+        private void MenuItem_Click_11(object sender, RoutedEventArgs e)
+        {
+            new StandingPointIssue().ShowDialog();
+        }
+
+        private void MenuItem_Click_12(object sender, RoutedEventArgs e)
+        {
+            new TTXSubordinate().ShowDialog();
+        }
+
+        private void MenuItem_Click_13(object sender, RoutedEventArgs e)
+        {
+            new DateTime().ShowDialog();
+        }
+
+        private void MenuItem_Click_14(object sender, RoutedEventArgs e)
+        {
+            new GeodezGaus().ShowDialog();
+        }
+        private void MenuItem_ClickParTrassy(object sender, RoutedEventArgs e)
+        {
+            new NumberOfTrassa().ShowDialog();
+        }
+        private void MenuItem_ClickParOtozhestvlen(object sender, RoutedEventArgs e)
+        {
+            new ParametryOtozhestvleniya().ShowDialog();
+        }
+        private void MenuItem_ClickParVyborochnogoOp(object sender, RoutedEventArgs e)
+        {
+            new ParametryVyborochnogoOponesheniya().ShowDialog();
+        }
+        private void MenuItem_ClickVvodStrobov(object sender, RoutedEventArgs e)
+        {
+            new UkrupnenieStroby().ShowDialog();
+        }
+        private void MenuItem_ClickRazukrupnenie(object sender, RoutedEventArgs e)
+        {
+            new UkrupnenieGruppa().ShowDialog();
+        }
+        private void MenuItem_ClickOtkrupnit(object sender, RoutedEventArgs e)
+        {
+            new UkrupnenieOtkrupnit().ShowDialog();
+        }
+        private void MenuItem_ClickPrikrupnit(object sender, RoutedEventArgs e)
+        {
+            new UkrupneniePrikrupnit().ShowDialog();
+        }
+        private void MenuItem_ClickSposobUkr(object sender, RoutedEventArgs e)
+        {
+            new UkrupnenieSposob().ShowDialog();
+        }
+        private void MenuItem_ClickParGruppy(object sender, RoutedEventArgs e)
+        {
+            new UkrupnenieParGruppy().ShowDialog();
         }
     }
 }

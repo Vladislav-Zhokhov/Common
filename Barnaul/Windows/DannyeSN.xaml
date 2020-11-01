@@ -1,0 +1,64 @@
+﻿<Window x:Class="Barnaul.Windows.DannyeSN"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Barnaul.Windows"
+        mc:Ignorable="d"
+        Title="Данные СН" Height="235" Width="457.135">
+    <GroupBox  HorizontalAlignment="Left" Height="167.636" Margin="6,3.471,0,0" VerticalAlignment="Top" Width="430.464">
+        <Grid HorizontalAlignment="Left" Margin="10,10,-11,-38" Width="419.464">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="351*"/>
+                <ColumnDefinition Width="397*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="X" VerticalAlignment="Top" Width="60.824"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Y" VerticalAlignment="Top" Width="60.824" Margin="0,24,0,0" Grid.RowSpan="2"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="H" VerticalAlignment="Top" Width="60.824" Grid.Row="2"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Vx" VerticalAlignment="Top" Width="60.824" Grid.Row="3"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Vy" VerticalAlignment="Top" Width="60.824" Grid.Row="4"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="60.824" Grid.Row="5"><Run Text="V"/><Run Text="сумм"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Номер зоны" VerticalAlignment="Top" Width="96.824" Grid.Column="1"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Дирекц. угол" VerticalAlignment="Top" Width="96.824" Grid.Column="1" Grid.Row="1"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Тангаж" VerticalAlignment="Top" Width="96.824" Grid.Column="1" Grid.Row="2"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Крен" VerticalAlignment="Top" Width="96.824" Grid.Column="1" Grid.Row="3"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Дир. угол на ПН" VerticalAlignment="Top" Width="96.824" Grid.Column="1" Grid.Row="4"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Дальность до ПН" VerticalAlignment="Top" Width="96.824" Grid.Column="1" Grid.Row="5"/>
+            <TextBox HorizontalAlignment="Left" Height="20" Margin="65.824,0,0,0" TextWrapping="Wrap" Text="58999020" VerticalAlignment="Top" Width="76.176"/>
+            <TextBox HorizontalAlignment="Left" Height="20" Margin="65.824,24,0,0" TextWrapping="Wrap" Text="500410" VerticalAlignment="Top" Width="76.176" Grid.RowSpan="2"/>
+            <TextBox HorizontalAlignment="Left" Height="20" Margin="65.824,0,0,0" TextWrapping="Wrap" Text="150" VerticalAlignment="Top" Width="76.176" Grid.Row="2"/>
+            <TextBox HorizontalAlignment="Left" Height="20" Margin="65.824,0,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Width="76.176" Grid.Row="3"/>
+            <TextBox HorizontalAlignment="Left" Height="20" Margin="65.824,0,0,0" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="76.176" Grid.Row="4"/>
+            <TextBox HorizontalAlignment="Left" Height="20" Margin="65.824,0,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="76.176" Grid.Row="5"/>
+            <TextBox HorizontalAlignment="Left" Height="20" Margin="101.824,0,0,0" TextWrapping="Wrap" Text="8" VerticalAlignment="Top" Width="76.176" Grid.Column="1"/>
+            <TextBox HorizontalAlignment="Left" Height="20" Margin="101.824,24,0,0" TextWrapping="Wrap" Text="0.20" VerticalAlignment="Top" Width="76.176" Grid.Column="1" Grid.RowSpan="2"/>
+            <TextBox HorizontalAlignment="Left" Height="20" Margin="101.824,0,0,0" TextWrapping="Wrap" Text="1.16" VerticalAlignment="Top" Width="76.176" Grid.Column="1" Grid.Row="2"/>
+            <TextBox HorizontalAlignment="Left" Height="20" Margin="101.824,0,0,0" TextWrapping="Wrap" Text="0.80" VerticalAlignment="Top" Width="76.176" Grid.Column="1" Grid.Row="3"/>
+            <TextBox HorizontalAlignment="Left" Margin="101.824,1,0,4" TextWrapping="Wrap" Text="15.45" Width="76.176" Grid.Column="1" Grid.Row="4"/>
+            <TextBox HorizontalAlignment="Left" Height="20" Margin="101.824,1,0,0" TextWrapping="Wrap" Text="15" VerticalAlignment="Top" Width="76.176" Grid.Column="1" Grid.Row="5"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="м" VerticalAlignment="Top" Width="60.824" Margin="147,0,0,0"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="м" VerticalAlignment="Top" Width="60.824" Margin="147,0,0,0" Grid.Row="1"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="м" VerticalAlignment="Top" Width="60.824" Margin="147,0,0,0" Grid.Row="2"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="м/с" VerticalAlignment="Top" Width="60.824" Margin="147,0,0,0" Grid.Row="3"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="м/с" VerticalAlignment="Top" Width="60.824" Margin="147,0,0,0" Grid.Row="4"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="м/с" VerticalAlignment="Top" Width="60.824" Margin="147,0,0,0" Grid.Row="5"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="град" VerticalAlignment="Top" Width="60.824" Grid.Column="1" Margin="183,0,0,0" Grid.Row="1"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="град" VerticalAlignment="Top" Width="60.824" Grid.Column="1" Margin="183,24,0,0" Grid.Row="1" Grid.RowSpan="2"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="град" VerticalAlignment="Top" Width="60.824" Grid.Column="1" Margin="183,0,0,0" Grid.Row="3"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="град" VerticalAlignment="Top" Width="60.824" Grid.Column="1" Margin="183,1,0,0" Grid.Row="4" RenderTransformOrigin="0.638,0.376"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="км" VerticalAlignment="Top" Width="60.824" Grid.Column="1" Margin="183,0,0,0" Grid.Row="5"/>
+            <Button Content="Регистрация" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119.834" Margin="67,35,0,-29.96" Grid.Row="5"/>
+            <Button Content="Выход" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119.834" Margin="10,35,0,-29.96" Grid.Row="5" Grid.Column="1" Click="Close_Click"/>
+
+        </Grid>
+    </GroupBox>
+
+</Window>

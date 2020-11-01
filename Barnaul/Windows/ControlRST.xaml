@@ -1,0 +1,88 @@
+﻿<Window x:Class="Barnaul.Windows.ControlRST"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Barnaul.Windows"
+        mc:Ignorable="d"
+        Title="Контроль РСТ" Height="305.517" Width="423.063">
+    <Grid Margin="0,0,2,7">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <GroupBox HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="404">
+            <Grid Margin="0,0,-2,-7">
+                <ComboBox SelectedIndex="0" HorizontalAlignment="Left" Height="20" Margin="180.668,2.001,0,0" VerticalAlignment="Top" Width="64">
+                    <ComboBoxItem Content="УКВ1"/>
+                    <ComboBoxItem Content="УКВ2"/>
+                    <ComboBoxItem Content="УКВ3"/>
+                    <ComboBoxItem Content="УКВ4"/>
+                    <ComboBoxItem Content="УКВ5"/>
+                    <ComboBoxItem Content="УКВ6"/>
+                    <ComboBoxItem Content="УКВ7"/>
+                    <ComboBoxItem Content="УКВ8"/>
+                </ComboBox>
+
+                <TextBlock HorizontalAlignment="Left" Height="20" Margin="103.001,2.001,0,0" TextWrapping="Wrap" Text="Выбор РСТ" VerticalAlignment="Top" Width="72.667"/>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="404" Grid.Row="1">
+            <Grid HorizontalAlignment="Left" Height="24" Margin="0,0,-2,-6" VerticalAlignment="Top" Width="394">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Состояние РСТ" VerticalAlignment="Top" Height="20" Width="90.56" Margin="0,1,0,0"/>
+                <TextBox HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="нажмите контроль" VerticalAlignment="Top" Width="298.44" Margin="95.56,0,0,0"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="404" Grid.Row="2">
+            <Grid HorizontalAlignment="Left" Height="25" Margin="0,0,-2,-7" VerticalAlignment="Top" Width="394">
+                <Button Content="Контроль" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="62,0.667,0,0" Height="20"/>
+                <Button Content="Выход" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="184,0.667,0,0" Height="20" Click="Close_Click"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox HorizontalAlignment="Left" Height="187.667" VerticalAlignment="Top" Width="404" Grid.Row="3">
+            <Grid HorizontalAlignment="Left" Height="191.667" Margin="0,0,-6,0" VerticalAlignment="Top" Width="398">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                </Grid.RowDefinitions>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="ЯУ" VerticalAlignment="Top" Margin="0,5,0,0" Height="20"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="БП" VerticalAlignment="Top" Margin="0,5,0,0" Height="20" Grid.Row="1"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="СЧ" VerticalAlignment="Top" Margin="0,5,0,0" Height="20" Grid.Row="2"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="ПРМ" VerticalAlignment="Top" Margin="0,5,0,0" Height="20" Grid.Row="3"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="ПРД" VerticalAlignment="Top" Margin="0,5,0,0" Height="20" Grid.Row="4"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="ВУ" VerticalAlignment="Top" Margin="0,5,0,0" Height="20" Grid.Row="5"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,5,0,0" Height="20" Grid.Row="6"><Run Text="РД"/></TextBlock>
+                <TextBox TextWrapping="Wrap" Margin="42.374,5,283.626,0" Height="20"/>
+                <TextBox TextWrapping="Wrap" Margin="42.374,5,283.626,0" Height="20" Grid.Row="1"/>
+                <TextBox TextWrapping="Wrap" Margin="42.374,5,283.626,0" Height="20" Grid.Row="2"/>
+                <TextBox TextWrapping="Wrap" Margin="42.374,5,283.626,0" Height="20" Grid.Row="3"/>
+                <TextBox TextWrapping="Wrap" Margin="42.374,5,283.626,0" Height="20" Grid.Row="4"/>
+                <TextBox TextWrapping="Wrap" Margin="42.374,5,283.626,0" Height="20" Grid.Row="5"/>
+                <TextBox TextWrapping="Wrap" Margin="42.374,5,283.626,0" Height="20" Grid.Row="6"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Маскиратор ТМ" VerticalAlignment="Top" Margin="127.374,5,0,0" Height="20"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Маскиратор 1" VerticalAlignment="Top" Margin="127.374,5,0,0" Height="20" Grid.Row="1"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Маскиратор 2" VerticalAlignment="Top" Margin="127.374,5,0,0" Height="20" Grid.Row="2"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Переполнение РГ" VerticalAlignment="Top" Margin="127.374,5,0,0" Height="20" Grid.Row="3"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="127.374,5,0,0" Height="20" Grid.Row="4" Text="Вырождение ключей"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Совпадение адресов в сети" VerticalAlignment="Top" Height="20" Margin="127.374,5,0,0" Grid.Row="5"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="ОЗУ или ПЗУ" VerticalAlignment="Top" Height="20" Margin="127.374,5,0,0" Grid.Row="6"/>
+                <TextBox HorizontalAlignment="Left" Height="20" Margin="284.104,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88.667" Grid.Row="5"/>
+                <TextBox HorizontalAlignment="Left" Height="20" Margin="284.104,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88.667" Grid.Row="6"/>
+                <TextBox HorizontalAlignment="Left" Height="20" Margin="284.104,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88.667" Grid.Row="4"/>
+                <TextBox HorizontalAlignment="Left" Height="20" Margin="284.104,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88.667" Grid.Row="3"/>
+                <TextBox HorizontalAlignment="Left" Height="20" Margin="284.104,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88.667" Grid.Row="2"/>
+                <TextBox HorizontalAlignment="Left" Height="20" Margin="284.104,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88.667" Grid.Row="1"/>
+                <TextBox HorizontalAlignment="Left" Height="20" Margin="284.104,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88.667"/>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>
