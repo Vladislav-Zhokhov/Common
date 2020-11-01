@@ -129,11 +129,20 @@
     <Compile Include="Windows\M_498.xaml.cs">
       <DependentUpon>M_498.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\M_498_2.xaml.cs">
-      <DependentUpon>M_498_2.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Windows\Navigate.xaml.cs">
       <DependentUpon>Navigate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\NumberOfTrassa.xaml.cs">
+      <DependentUpon>NumberOfTrassa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ParametryOtozhestvleniya.xaml.cs">
+      <DependentUpon>ParametryOtozhestvleniya.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ParametryTrassy.xaml.cs">
+      <DependentUpon>ParametryTrassy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ParametryVyborochnogoOponesheniya.xaml.cs">
+      <DependentUpon>ParametryVyborochnogoOponesheniya.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Select.xaml.cs">
       <DependentUpon>Select.xaml</DependentUpon>
@@ -155,6 +164,30 @@
     </Compile>
     <Compile Include="Windows\TTXSubordinate.xaml.cs">
       <DependentUpon>TTXSubordinate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UkrupnenieGruppa.xaml.cs">
+      <DependentUpon>UkrupnenieGruppa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UkrupnenieOtkrupnit.xaml.cs">
+      <DependentUpon>UkrupnenieOtkrupnit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UkrupnenieParGruppy.xaml.cs">
+      <DependentUpon>UkrupnenieParGruppy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UkrupnenieParGruppy_2.xaml.cs">
+      <DependentUpon>UkrupnenieParGruppy_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UkrupneniePrikrupnit.xaml.cs">
+      <DependentUpon>UkrupneniePrikrupnit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UkrupnenieSposob.xaml.cs">
+      <DependentUpon>UkrupnenieSposob.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UkrupnenieStroby.xaml.cs">
+      <DependentUpon>UkrupnenieStroby.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UkrupnenieVyvesti.xaml.cs">
+      <DependentUpon>UkrupnenieVyvesti.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\VvodComandi2ZWindow.xaml.cs">
       <DependentUpon>VvodComandi2ZWindow.xaml</DependentUpon>
@@ -246,11 +279,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\M_498_2.xaml">
+    <Page Include="Windows\Navigate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\Navigate.xaml">
+    <Page Include="Windows\NumberOfTrassa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ParametryOtozhestvleniya.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ParametryTrassy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ParametryVyborochnogoOponesheniya.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -291,6 +336,38 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\TTXSubordinate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UkrupnenieGruppa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UkrupnenieOtkrupnit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UkrupnenieParGruppy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UkrupnenieParGruppy_2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UkrupneniePrikrupnit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UkrupnenieSposob.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UkrupnenieStroby.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UkrupnenieVyvesti.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
