@@ -129,6 +129,9 @@
     <Compile Include="Windows\M_498.xaml.cs">
       <DependentUpon>M_498.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\BlankZapretaAZSoprovozhdenie.xaml.cs">
+      <DependentUpon>BlankZapretaAZSoprovozhdenie.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Navigate.xaml.cs">
       <DependentUpon>Navigate.xaml</DependentUpon>
     </Compile>
@@ -278,6 +281,10 @@
     <Page Include="Windows\M_498.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\BlankZapretaAZSoprovozhdenie.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\Navigate.xaml">
       <SubType>Designer</SubType>

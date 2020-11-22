@@ -21,6 +21,11 @@ namespace Barnaul.Windows
 
         }
 
+        private void SoprovodBlyat(object sender, RoutedEventArgs e)
+        {
+            new BlankZapretaAZSoprovozhdenie().ShowDialog();
+        }
+
         private void MapUserControl_Loaded(object sender, RoutedEventArgs e)
         {
 

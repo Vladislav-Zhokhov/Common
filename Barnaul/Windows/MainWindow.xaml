@@ -52,7 +52,7 @@
             </MenuItem>
             <MenuItem Header="Сопровождение">
                 <MenuItem Header="Бланк автозахвата" InputGestureText="Сtrl+31" />
-                <MenuItem Header="Бланк АЗПТ" InputGestureText="Сtrl+32" />
+                <MenuItem Header="Бланк АЗПТ" Click="SoprovodBlyat"/>
                 <MenuItem Header="Код абонента для ручного ввода" InputGestureText="Сtrl+33" />
             </MenuItem>
             <MenuItem Header="ОбобщениеВО">
